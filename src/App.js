@@ -1,9 +1,33 @@
 import React, {useState} from "react";
-import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 import "./App.css"
 
-function App() {
+const App = (props) => {
+    
+    const [text, setText] = useState('');
+    const onChange = (e) => {
+        setText(e.target.value);
+    };
+    const checkUser=()=>{
+        axios.post('서버 주소 도메인 여기다 넣을거니까 빨리 정해 송인서',{ 
+            params:{ email: (text)} 
+        }).then(response=>{
+            console.log(response.data);
+            console.log(text);
+            if (response.data.code === 200) {
+                alert("Success");
+            } else if (response.data.code === 400) {
+                alert("Bad Request");
+            } else if (response.data.code === 500) {
+                alert("Server error");
+            }
+        },
+        (error)=>{
+            console.log(error);   
+        });
+        
+    }
   return (
     <div className="home-main">              
       <div className="signup-main">
@@ -17,13 +41,13 @@ function App() {
                       <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
                           <label for="email" class="style_label__BKYHB">이메일</label>
                           <div class="style_body__A6XnO">
-                              <input type="email" placeholder="이메일을 입력해 주세요." id="email" ></input>
+                              <input type="email" onChange={onChange} placeholder="이메일을 입력해 주세요." id="email" value={text}></input>
                           </div>
                           <div class="style_guidance__FT8Qs input-group-guidance"></div>
                       </div>
                       <div class="InputPanel_buttons__w391m">
                           <button type="button" class="style_wrapper__IgK7U email-login-button"
-                            >
+                           onClick={checkUser}>
                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2"><rect width="17.2" height="14" x="3.4" y="5" rx="3"></rect><path d="M3.2 5.6L12 12l8.8-6.4"></path></g></svg>이메일로 계속하기
                           </button>
                           <div class="InputPanel_divider__WEgZ3"></div>
