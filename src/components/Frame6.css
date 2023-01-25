@@ -1,0 +1,16 @@
+.frame-6 {
+    color: #8c8c8c;
+    color: #fff;
+    background-color: #5287c6;
+    border: 1px solid #2e5689;
+    border-radius: 0 4px 4px 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    font-family: SF Pro Display, Arial;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+  }
+  
