@@ -1,4 +1,4 @@
-.frame-32 {
+.header-container {
     color: #262626;
     background-color: #fff;
     flex-direction: row;
@@ -6,11 +6,11 @@
     align-items: center;
     padding-bottom: 1px;
     padding-right: 10px;
-    font-family: SF Pro Display, Arial;
     font-size: 1rem;
     font-weight: 500;
     line-height: 26px;
     display: flex;
+    height: 100px;
   }
   
   .kakao-talk-photo-2023 {
@@ -23,7 +23,7 @@
     margin-right: 360px;
   }
   
-  .ap-is {
+  .apis {
     margin-top: 1px;
     margin-left: 360px;
   }
@@ -32,6 +32,7 @@
     width: 26px;
     height: 26px;
     object-fit: cover;
+    margin-left: -20px;
   }
   
   .documentation {
@@ -42,7 +43,7 @@
     margin-top: 2px;
   }
   
-  .frame-31 {
+  .signup-button{
     color: #fff;
     height: 35%;
     background-color: #2e568980;
