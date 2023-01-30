@@ -1,8 +1,16 @@
+.frame-32-instance-1 {
+  margin-top: 30px;
+  width: 90%;
+  flex-basis: 12%;
+  align-items: center;
+}
+
 .frame-32 {
+  width: 90%;
     color: #262626;
     background-color: #fff;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 1px;
     padding-right: 10px;
@@ -12,49 +20,53 @@
     line-height: 26px;
     display: flex;
   }
-  
+  .letter-frame{
+    width: 35%;
+    color: #262626;
+    background-color: #fff;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1px;
+    padding-right: 10px;
+    font-family: SF Pro Display, Arial;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 26px;
+    display: flex;
+  }
   .kakao-talk-photo-2023 {
-    width: 147px;
-    height: 101px;
     object-fit: cover;
     background-position: center;
     background-size: cover;
     margin-bottom: 1px;
-    margin-right: 360px;
+    margin-right: 0px;
   }
-  
+  .api-container{
+    display: flex;
+    margin-left: 0px;
+  }
   .ap-is {
-    margin-top: 1px;
-    margin-left: 360px;
+    margin-right: 10px;
   }
   
   .expand-more-1 {
     width: 26px;
     height: 26px;
-    object-fit: cover;
-  }
-  
-  .documentation {
-    margin-top: 1px;
-  }
-  
-  .pricing, .login {
-    margin-top: 2px;
   }
   
   .frame-31 {
+    width: 110px;
     color: #fff;
-    height: 35%;
     background-color: #2e568980;
     border: none;
     border-radius: 8px;
     flex-direction: row;
-    flex-basis: 6%;
     justify-content: center;
     align-items: center;
     margin-top: 2px;
     margin-bottom: 2px;
-    padding-top: 1px;
+    padding: 10px;
     display: flex;
   }
   
