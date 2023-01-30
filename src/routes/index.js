@@ -1,15 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Slide1 from "../pages/Slide1";
-import Slide2 from "../pages/Slide2";
-import Slide3 from "../pages/Slide3";
+import Home from "../pages/Home.jsx";
+import Login from "../pages/Login.jsx";
 const RootRoute = () => {
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Slide1/>} />
-                <Route path='/2' element={<Slide2/>} />
-                <Route path='/3' element={<Slide3/>} />
+                <Route path='/' element={<Home/>} />
+                <Route path='/1' element={<Login/>} />
             </Routes>
         </BrowserRouter>
     )

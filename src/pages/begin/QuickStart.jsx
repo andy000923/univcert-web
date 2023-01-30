@@ -1,9 +1,8 @@
 import * as React from "react";
-import "./Slide2.css";
 import image2 from "../assets/image2.png";
 import image3 from "../assets/image3.png";
 import Header from "../components/Header";
-const Slide2 = () => {
+const QuickStart = () => {
     return (
             <div>
                 <Header/>
@@ -19,4 +18,4 @@ const Slide2 = () => {
             </div>
     );
 };
-export default Slide2;
+export default QuickStart;
