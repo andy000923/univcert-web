@@ -2,8 +2,8 @@ import "./Info.css"
 import Header from "../../components/Header";
 import SideBar from "../../components/SideBar";
 import ContactUsButton from '../../components/ContactUsButton';
-import f2 from "../../assets/f2.png";
-const Info2= () => {
+import f4 from "../../assets/f4.png";
+const Info4= () => {
   return (
     <div className="slide1">
       <Header/>
@@ -11,7 +11,7 @@ const Info2= () => {
       <div className="container">
         <SideBar/>
         <div className="img-container">
-            <img className="FrameImg" src={f2} />
+            <img className="FrameImg" src={f4} />
         </div>
         <div className="contact-container">
             <ContactUsButton/>
@@ -21,4 +21,4 @@ const Info2= () => {
     </div>
   );
 };
-export default Info2;
+export default Info4;
