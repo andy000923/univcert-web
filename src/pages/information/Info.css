@@ -1,0 +1,14 @@
+.container{
+    width: 100%;
+    display : flex  !important;
+
+}
+
+.img-container{
+    width: 100%;
+    min-width: 900px;
+}
+.FrameImg{
+    width: 80%;
+    margin-left: 5%;
+}

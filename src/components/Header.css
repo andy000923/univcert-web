@@ -1,5 +1,7 @@
 .frame-32-instance-1 {
   margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 5%;
   width: 90%;
   flex-basis: 12%;
   align-items: center;

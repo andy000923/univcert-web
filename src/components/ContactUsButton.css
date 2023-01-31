@@ -1,20 +1,21 @@
 .image9{
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
   margin-top: 6px;
 }
+.Button9{
+  height: 40px;
+}
 .flex-container-5 {
   margin-top: 10px;
-  width: 98%;
   flex-direction: row;
   flex-basis: 4%;
   justify-content: right;
   align-items: stretch;
-  font-family: Jura, Arial;
-  font-size: .938rem;
-  font-weight: 700;
   display: flex;
-  
+  position: absolute;
+    bottom: 30px;
+    right: 30px;
 }
   

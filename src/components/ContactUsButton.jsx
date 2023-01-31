@@ -1,4 +1,3 @@
-import * as React from "react";
 import "./ContactUsButton.css";
 import Button9 from "../assets/Button9.png";
 import image9 from "../assets/image9.png";

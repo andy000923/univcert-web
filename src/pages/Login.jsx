@@ -63,7 +63,7 @@ const Login = (props) => {
     <div className="home-main">              
         <div className="signup-main">
         <img className="univcertlogo" src={univcertlogo}/>
-            <div>                        
+            <div className="body-outer" >                        
                 <div id="MODAL_BODY" class="ModalBody Body_body__KI0OY SignUpOrLogin_modal__VDGVH">
                     <div class="TextPanel_className__J3J2W">
                         <h1>API 키 확인을 위한 로그인</h1>
@@ -91,7 +91,7 @@ const Login = (props) => {
                             <div class="InputPanel_socialLogins__j0wq7">도메인 명을 잊어버리셨나요?</div>
                             <div class="InputPanel_divider__WEgZ3"></div>
                             <div class="InputPanel_socialWrapper__Dhaxo isKR">
-                            <img className="loginlogo" src={createaccountbutton}/>
+                            <img className="create-button" src={createaccountbutton}/>
                             </div>
                         </div>
                         <p class="style_wrapper__MbwMv">회원가입 시 <a class="loginModalAnchor" href="https://help.wanted.co.kr/hc/ko/articles/360035484292" target="_blank">개인정보 처리방침</a>과 <a class="loginModalAnchor" href="https://help.wanted.co.kr/hc/ko/articles/360035844551" target="_blank">이용약관</a>을 확인하였으며, 동의합니다.</p>
