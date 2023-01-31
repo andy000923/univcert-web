@@ -258,6 +258,7 @@ button {
 }
 .loginlogo{
     width: 100%;
+    vertical-align: middle;
 }
 
 .univcertlogo{
@@ -265,4 +266,7 @@ button {
     margin-top: 5%;
     margin-bottom: 5%;
     width: 30%;
+}
+.button-container{
+    vertical-align: bottom;
 }

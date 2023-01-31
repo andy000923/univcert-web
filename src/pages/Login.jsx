@@ -101,7 +101,9 @@ const Login = (props) => {
         </div>
         <div className="advertisement-main">
             <img className="loginlogo" src={loginlogo}/>
-            <ContactUsButton/>
+            <div className="button-container">
+                <ContactUsButton/>
+            </div>
         </div>
     </div>
   );
