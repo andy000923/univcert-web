@@ -1,19 +1,34 @@
-import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import expandMore1 from "../assets/expandMore1.svg";
-import kakaoTalkPhoto2023 from "../assets/kakaoTalkPhoto2023.png";
 import univcertlogo from "../assets/UNIVCERT.png"
+import SideBar from "./SideBar";
 const Header = (props) => {
+
+  const navigate = useNavigate();
+  const goToHome = () => {
+    navigate("/");
+  };
+  const goTo1 = () => {
+    navigate("/1");
+  };
+  const goToLogin = () => {
+    navigate("/login");
+  };
+
   return (
     <div className="frame-32-instance-1">
       <div className={`frame-32 ${props.className || ""}`}>
-        <img className="kakao-talk-photo-2023" src={univcertlogo} />
+        <img className="kakao-talk-photo-2023" src={univcertlogo} onClick={goToHome}/>
         <div className="letter-frame">
           <div className="api-container">
             <span className="ap-is">APIs</span>
-            <img type="button" alt="" src={expandMore1} onClick=" "/>
+            <img type="button" className="api-button" alt="apis" src={expandMore1} onClick={goTo1}/>
+            <ul class="dropdown-content">
+              <SideBar/>
+            </ul>
           </div>
-          <span className="login">Login</span>
+          <span className="login" onClick={goToLogin}>Login</span>
           <button className="frame-31">API 키 발급</button>
           </div>
       </div>
