@@ -25,13 +25,13 @@
     background: linear-gradient(#f2f2f200 0%, #2e56891a 100%);
     flex-basis: 70%;
     justify-content: space-between;
-    padding-top: 140px;
-    padding-bottom: 110px;
+    padding-top: 60px;
+    padding-bottom: 70px;
     font-size: 2rem;
     line-height: 1.5rem;
     display: flex;
+    align-items: center;
   }
-  
   .flex-container {
     height: 50%;
     flex-direction: column;
@@ -85,16 +85,7 @@
     width: 100%;
     flex-basis: 74%;
   }
-  
-  .flex-container-2 {
-    margin-left: 10%;
-    width: 70%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-weight: 400;
-    display: flex;
-  }
+
   
   .group-83 {
     object-fit: cover;
@@ -348,6 +339,11 @@ width : 100%;
 
 .footer-container {
   width: 100%;
-  margin-top: 30px;
   text-align: center;
   }
+
+.group170{
+  width : 100%;
+  max-width: 1500px;
+  margin-bottom: -100px;
+}
