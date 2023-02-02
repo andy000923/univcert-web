@@ -28,7 +28,7 @@ const SideBar = (props) => {
 
   return (
     <div className="frame1-container">
-        <img className="Frame1" src={Frame1} onClick={goTo1}/>
+        <img className="Frame0" src={Frame1} onClick={goTo1}/>
         <img className="reference1" src={reference} />
         <img className="Frame1" src={Frame2} onClick={goTo2}/>
         <img className="Frame1" src={Frame3} onClick={goTo3}/>
