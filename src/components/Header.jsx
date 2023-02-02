@@ -29,7 +29,7 @@ const Header = (props) => {
             </ul>
           </div>
           <span className="login" onClick={goToLogin}>Login</span>
-          <button className="frame-31">API 키 발급</button>
+          <button className="frame-31" onClick={goToLogin}>API 키 발급</button>
           </div>
       </div>
     </div>
