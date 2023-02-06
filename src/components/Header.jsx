@@ -10,7 +10,7 @@ const Header = (props) => {
     navigate("/");
   };
   const goTo1 = () => {
-    navigate("/1");
+    navigate("/instruction");
   };
   const goToLogin = () => {
     navigate("/login");
