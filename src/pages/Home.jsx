@@ -44,9 +44,9 @@ const Home = () => {
           .then(response=>{
             console.log(response);
             if (response.data.code == null) {          
-              alert("Success");    
+              alert("테스트가 가능한 학교명입니다!");    
             }
-            else if (response.data.code == 400) {
+            else if (response.data.code != null) {
               alert((response.data.message));
             }
           },
@@ -80,6 +80,10 @@ const Home = () => {
                 }
                 else if (response.data.status === 400) {
                   alert("Bad Request , expected : "+(response.data.expected));
+                  setsuccess("false");
+                }
+                else if (response.data.code != null) {
+                  alert((response.data.message));
                   setsuccess("false");
                 }
             },

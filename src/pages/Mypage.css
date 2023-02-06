@@ -272,6 +272,7 @@ button {
     margin-top: 5%;
     margin-bottom: 5%;
     width: 30%;
+    cursor : pointer;
 }
 .button-container{
     vertical-align: bottom;

@@ -8,7 +8,10 @@ import axios from "axios";
 import "./Mypage.css"
 
 const Mypage = (props) => {
-  
+    const navigate = useNavigate();
+    const goToHome = () => {
+        navigate("/");
+    };
     const baseUrl = 'https://univcert.com/api';
 
     const [email, setemail] = useState();
@@ -62,7 +65,7 @@ const Mypage = (props) => {
   return (
     <div className="home-main">              
         <div className="signup-main">
-        <img className="univcertlogo" src={univcertlogo}/>
+        <img className="univcertlogo" src={univcertlogo} onClick={goToHome}/>
             <div className="body-outer" >                        
                 <div id="MODAL_BODY" class="ModalBody Body_body__KI0OY SignUpOrLogin_modal__VDGVH">
                     <div class="TextPanel_className__J3J2W">

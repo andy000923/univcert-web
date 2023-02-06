@@ -8,7 +8,10 @@ import axios from "axios";
 import "./Login.css"
 
 const Login = (props) => {
-  
+    const navigate = useNavigate();
+    const goToHome = () => {
+        navigate("/");
+    };
     const baseUrl = 'https://univcert.com:8080/api';
 
     const [email, setemail] = useState();
@@ -38,18 +41,19 @@ const Login = (props) => {
             .then(response=>{
                 console.log(response);
                 console.log(email, team_name);
-                if (response.status === 200) {
-                    alert("Success");
-                } else if (response.status === 400) {
+                if (response.status == 200) {
+                    alert("로그인 성공!");
+                    navigate("/mypage");
+                } else if (response.status == 400) {
                     alert("Bad Request");
-                } else if (response.status === 500) {
+                } else if (response.status == 500) {
                     alert("Server error");
                 }
             },
             (error)=>{
                 console.log(error);              
                 if (error.code!=null) {
-                    alert(error.message);
+                    alert("로그인 실패, 가입된 회원이 아니라면 먼저 회원가입을 진행해 주세요.");
                 }  
             });
     }
@@ -58,7 +62,7 @@ const Login = (props) => {
   return (
     <div className="home-main">              
         <div className="signup-main">
-        <img className="univcertlogo" src={univcertlogo}/>
+        <img className="univcertlogo" src={univcertlogo} onClick={goToHome}/>
             <div className="body-outer" >                        
                 <div id="MODAL_BODY" class="ModalBody Body_body__KI0OY SignUpOrLogin_modal__VDGVH">
                     <div class="TextPanel_className__J3J2W">
