@@ -13,19 +13,19 @@ const Info2= () => {
   const navigate = useNavigate();
 
   const goTo1 = () => {
-    navigate("/1");
+    navigate("/instruction");
   };
   const goTo2 = () => {
-    navigate("/2");
+    navigate("/instruction1");
   };
   const goTo3 = () => {
-    navigate("/3");
+    navigate("/instruction2");
   };
   const goTo4 = () => {
-    navigate("/4");
+    navigate("/instruction3");
   };
   const goTo5 = () => {
-    navigate("/5");
+    navigate("/instruction4");
   };
   return (
     <div className="slide1">
