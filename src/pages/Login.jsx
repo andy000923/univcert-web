@@ -9,7 +9,7 @@ import "./Login.css"
 
 const Login = (props) => {
   
-    const baseUrl = 'https://univcert.com/api';
+    const baseUrl = 'https://univcert.com:8080/api';
 
     const [email, setemail] = useState();
     const [team_name, setteam_name] = useState();
@@ -48,10 +48,8 @@ const Login = (props) => {
             },
             (error)=>{
                 console.log(error);              
-                if (1) {
-                    alert((error.code));
-                } else if (error.response.status === 500) {
-                    alert("Server error");
+                if (error.code!=null) {
+                    alert(error.message);
                 }  
             });
     }

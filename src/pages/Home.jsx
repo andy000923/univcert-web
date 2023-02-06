@@ -2,17 +2,11 @@ import React, {useState} from 'react';
 import {useEffect} from 'react';
 import axios from 'axios';
 import "./Home.css";
-import expandMore1 from "../assets/expandMore1.svg";
-import Frame34 from "../assets/Group83.png";
-import search1 from "../assets/search1.svg";
-import vector4 from "../assets/Vector4.png";
-import group79 from "../assets/Group79.png";
-import group82 from "../assets/Group82.png";
 import group170 from "../assets/Group170.svg";
 import Header from "../components/Header";
 import ContactUsButton from '../components/ContactUsButton';
 const Home = () => {
-  const baseUrl = 'https://univcert.com/api';
+  const baseUrl = 'https://univcert.com:8080/api';
 
     const [email, setemail] = useState();
     const [email1, setemail1] = useState();
@@ -37,7 +31,32 @@ const Home = () => {
         e.preventDefault();
         setunivName(e.target.value);
     }
-
+    const handleCheckUniv = async (e) => {
+      e.preventDefault();
+      axios.defaults.withCredentials = true;
+      await axios
+          .post(baseUrl + "/checkuniv", {
+            univName:univName,
+          },
+          {
+              withCredentials: true // 쿠키 cors 통신 설정
+            })
+          .then(response=>{
+            console.log(response);
+            if (response.data.code == null) {          
+              alert("Success");    
+            }
+            else if (response.data.code == 400) {
+              alert((response.data.message));
+            }
+          },
+          (error)=>{
+              console.log(error); 
+            if (error.code != null) {
+                  alert(error.message);
+              }  
+          });
+  }
     const handleSubmit = async (e) => {
         e.preventDefault();
         axios.defaults.withCredentials = true;
@@ -60,14 +79,14 @@ const Home = () => {
                   setsuccess("true");   
                 }
                 else if (response.data.status === 400) {
-                  alert("Bad Request");
+                  alert("Bad Request , expected : "+(response.data.expected));
                   setsuccess("false");
                 }
             },
             (error)=>{
                 console.log(error); 
-              if (error.response.status === 500) {
-                    alert("Server error");
+              if (error.code != null) {
+                    alert(error.message);
                 }  
             });
     }
@@ -86,7 +105,7 @@ const Home = () => {
             </span>
             <div className="univName-container">
               <input type="text" className="univName-input" required={true} value={univName} onChange={handleChange_univName} placeholder=" ex) 홍익대학교"/>
-              
+              <button type="submit" className="test-button" onClick={handleCheckUniv}>대학명 체크</button>
             </div>   
             <div className="email-container">
               <input type="email" className="email-input" required={true} value={email} onChange={handleChange_email} placeholder=" ex) abc123@mail.hongik.ac.kr"/>
