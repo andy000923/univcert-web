@@ -3,6 +3,7 @@ import {useEffect} from 'react';
 import axios from 'axios';
 import "./Home.css";
 import group170 from "../assets/Group170.svg";
+import checkbox from "../assets/checkbox.png";
 import Header from "../components/Header";
 import ContactUsButton from '../components/ContactUsButton';
 const Home = () => {
@@ -115,10 +116,19 @@ const Home = () => {
               <input type="email" className="email-input" required={true} value={email} onChange={handleChange_email} placeholder=" ex) abc123@mail.hongik.ac.kr"/>
               <button type="submit" className="test-button" onClick={handleSubmit}>테스트</button>
             </div> 
+            <div className="checkbox-container">
+              <img src={checkbox} className="checkbox"/>
+              <ul class="checkbox-content">
+                <p className='check-text'>메일만 인증하는 <br/> 테스트를 위해서는 <br/> APIs 페이지를 <br/> 참고해주세요.</p>
+              </ul>
+            </div>
           </div>
           <div className="flex-container-div"></div>
           <div className="flex-container-1">
             <div class="w-full lg:w-1/3">
+              <div className="info-container">
+                UnivCert.certify("private Key", "abc123@mail.hongik.ac.kr", "홍익대학교", true);
+              </div>
               <div class="code-container">
                 <pre class="flex items-center h-64 bg-gray-700 rounded shadow-xl ">                        
                   <code class="language-json hljs">

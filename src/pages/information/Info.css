@@ -23,6 +23,7 @@
     margin-left: 5%;
 }
 .Frame{
+    cursor : pointer;
     width: 80%;
     margin-top: 5px;
 }

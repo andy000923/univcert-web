@@ -9,84 +9,85 @@
 
 .frame-32 {
   width: 90%;
-    color: #262626;
-    background-color: #fff;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1px;
-    padding-right: 10px;
-    font-family: SF Pro Display, Arial;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 26px;
-    display: flex;
-  }
-  .letter-frame{
-    width: 35%;
-    color: #262626;
-    background-color: #fff;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1px;
-    padding-right: 10px;
-    font-family: SF Pro Display, Arial;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 26px;
-    display: flex;
-  }
-  .kakao-talk-photo-2023 {
-    cursor: pointer;
-    object-fit: cover;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 1px;
-    margin-right: 0px;
-  }
-  .api-container{
-    display: flex;
-    margin-left: 0px;
-  }
-  .ap-is {
-    margin-right: 10px;
-  }
-  
-  .expand-more-1 {
-    width: 26px;
-    height: 26px;
-  }
-  
-  .frame-31 {
-    width: 110px;
-    color: #fff;
-    background-color: #2e568980;
-    border: none;
-    border-radius: 8px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    padding: 10px;
-    display: flex;
-  }
-  .api-button{
-    cursor : pointer;
-  }
-  .login{
-    cursor : pointer;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-radius: 30px;
+  color: #262626;
+  background-color: #fff;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1px;
+  padding-right: 10px;
+  font-family: SF Pro Display, Arial;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 26px;
+  display: flex;
+}
+.letter-frame{
+  width: 35%;
+  color: #262626;
+  background-color: #fff;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1px;
+  padding-right: 10px;
+  font-family: SF Pro Display, Arial;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 26px;
+  display: flex;
+}
+.kakao-talk-photo-2023 {
+  cursor: pointer;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 1px;
+  margin-right: 0px;
+}
+.api-container{
+  display: flex;
+  margin-left: 0px;
+}
+.ap-is {
+  margin-right: 10px;
 }
 
-  .api-container:hover .dropdown-content {
-    display: block;
+.expand-more-1 {
+  width: 26px;
+  height: 26px;
+}
+
+.frame-31 {
+  cursor : pointer;
+  width: 110px;
+  color: #fff;
+  background-color: #2e568980;
+  border: none;
+  border-radius: 8px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 10px;
+  display: flex;
+}
+.api-button{
+  cursor : pointer;
+}
+.login{
+  cursor : pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 30px;
+}
+
+.api-container:hover .dropdown-content {
+  display: block;
 }
