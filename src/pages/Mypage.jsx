@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import loginlogo from "../assets/loginlogo.png"
 import univcertlogo from "../assets/UNIVCERT.png"
 import ContactUsButton from "../components/ContactUsButton"
-import createaccountbutton from "../assets/CreateAccountButton.png"
+import Login from "../pages/Login"
 import axios from "axios";
 import "./Mypage.css"
 
-const Mypage = (props) => {
+const Mypage = (response) => {
     const navigate = useNavigate();
     const goToHome = () => {
         navigate("/");
@@ -16,50 +16,8 @@ const Mypage = (props) => {
 
     const [email, setemail] = useState();
     const [team_name, setteam_name] = useState();
-
-    const handleChange_email = (e)=>{
-        e.preventDefault();
-        setemail(e.target.value);
-    }
-
-    const handleChange_team_name = (e)=>{
-        e.preventDefault();
-        setteam_name(e.target.value);
-    }
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        axios.defaults.withCredentials = true;
-        await axios
-            .post(baseUrl + "/login", {
-                email:email,
-                team_name:team_name,
-            },
-            {
-                withCredentials: true // 쿠키 cors 통신 설정
-              })
-            .then(response=>{
-                console.log(response);
-                console.log(email, team_name);
-                if (response.status === 200) {
-                    alert("Success");
-                } else if (response.status === 400) {
-                    alert("Bad Request");
-                } else if (response.status === 500) {
-                    alert("Server error");
-                }
-            },
-            (error)=>{
-                console.log(error); 
-                if (error.response.status === 200) {
-                    alert("Success");
-                } else if (error.response.status === 400) {
-                    alert("Bad Request");
-                } else if (error.response.status === 500) {
-                    alert("Server error");
-                }  
-            });
-    }
+    const [emailmax, setemailmax] = useState();
+    const [apikey, setapikey] = useState();
         
     
   return (
@@ -88,13 +46,13 @@ const Mypage = (props) => {
                         <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
                             <label for="email" class="style_label__BKYHB">API KEY</label>
                             <div class="style_body__A6XnO">
-                                <input type="text"  id="email" value={team_name}></input>
+                                <input type="text"  id="email" value={apikey}></input>
                             </div>
                         </div>
                         <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
                             <label for="email" class="style_label__BKYHB">오늘 메일 발송 횟수 (최대 200)</label>
                             <div class="style_body__A6XnO">
-                                <input type="email" id="email" value={email}></input>
+                                <input type="email" id="email" value={emailmax}></input>
                             </div>
                         </div>            
                     </div>

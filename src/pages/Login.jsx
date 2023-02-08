@@ -7,7 +7,7 @@ import createaccountbutton from "../assets/CreateAccountButton.png"
 import axios from "axios";
 import "./Login.css"
 
-const Login = (props) => {
+const Login = (response) => {
     const navigate = useNavigate();
     const goToHome = () => {
         navigate("/");

@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 import {useEffect} from 'react';
 import axios from 'axios';
 import "./Home.css";
+import styled from 'styled-components';
 import group170 from "../assets/Group170.svg";
 import checkbox from "../assets/checkbox.png";
 import Header from "../components/Header";
 import ContactUsButton from '../components/ContactUsButton';
 const Home = () => {
   const baseUrl = 'https://univcert.com:8080/api';
-
+    const [color, setcolor] = useState();
     const [email, setemail] = useState();
     const [email1, setemail1] = useState();
     const [domain, setdomain] = useState();
@@ -57,7 +58,10 @@ const Home = () => {
                   alert(error.message);
               }  
           });
-  }
+        }
+        const Title = styled.span`
+          color: #048611;
+        `;
     const handleSubmit = async (e) => {
         e.preventDefault();
         axios.defaults.withCredentials = true;
@@ -77,7 +81,7 @@ const Home = () => {
                 setunivName1(univName);
                 if (response.data.status === 200) {          
                   alert("Success");  
-                  setsuccess("true");   
+                  setsuccess("true");
                 }
                 else if (response.data.status === 400) {
                   alert("Bad Request , expected : "+(response.data.expected));
@@ -127,13 +131,13 @@ const Home = () => {
           <div className="flex-container-1">
             <div class="w-full lg:w-1/3">
               <div className="info-container">
-                UnivCert.certify("private Key", "abc123@mail.hongik.ac.kr", "홍익대학교", true);
+                UnivCert.certify("private Key", {email}, {univName}, true);
               </div>
               <div class="code-container">
                 <pre class="flex items-center h-64 bg-gray-700 rounded shadow-xl ">                        
                   <code class="language-json hljs">
                     <span class="hljs-punctuation">&#123; </span><br/>
-                        <span class="hljs-attr"> "status"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">{status}</span><span class="hljs-punctuation">,</span><br/>
+                        <Title> "status"</Title><span class="hljs-punctuation">:</span> <span class="hljs-number">{status}</span><span class="hljs-punctuation">,</span><br/>
                         <span class="hljs-attr"> "domain"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">{domain}</span><span class="hljs-punctuation">,</span> <br/>
                         <span class="hljs-attr"> "univ_email"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{email1}</span><span class="hljs-punctuation">,</span><br/>
                         <span class="hljs-attr"> "univ_name"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{univName1}</span><span class="hljs-punctuation">,</span><br/>
