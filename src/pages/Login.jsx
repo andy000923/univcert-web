@@ -5,15 +5,19 @@ import univcertlogo from "../assets/UNIVCERT.png"
 import ContactUsButton from "../components/ContactUsButton"
 import createaccountbutton from "../assets/CreateAccountButton.png"
 import axios from "axios";
+import Mypage from "./Mypage";
 import "./Login.css"
 
-const Login = (response) => {
+const Login = () => {
     const navigate = useNavigate();
     const goToHome = () => {
         navigate("/");
     };
+    const [mypage, setmypage] = useState(false);
     const baseUrl = 'https://univcert.com:8080/api';
 
+    const [emailmax, setemailmax] = useState();
+    const [apikey, setapikey] = useState();
     const [email, setemail] = useState();
     const [team_name, setteam_name] = useState();
 
@@ -43,9 +47,11 @@ const Login = (response) => {
                 console.log(email, team_name);
                 if (response.status == 200) {
                     alert("로그인 성공!");
-                    navigate("/mypage");
+                    setemailmax(response.data.data.queryCount);
+                    setapikey(response.data.data.key);
+                    setmypage(true);
                 } else if (response.status == 400) {
-                    alert("Bad Request");
+                    alert("로그인 실패, 가입된 회원이 아니라면 먼저 회원가입을 진행해 주세요.");
                 } else if (response.status == 500) {
                     alert("Server error");
                 }
@@ -56,14 +62,81 @@ const Login = (response) => {
                     alert("로그인 실패, 가입된 회원이 아니라면 먼저 회원가입을 진행해 주세요.");
                 }  
             });
-    }
+        }
+        const handleJoin = async (e) => {
+            e.preventDefault();
+            axios.defaults.withCredentials = true;
+            await axios
+                .post(baseUrl + "/join", {
+                    email:email,
+                    team_name:team_name,
+                },
+                {
+                    withCredentials: true // 쿠키 cors 통신 설정
+                  })
+                .then(response=>{
+                    console.log(response);
+                    console.log(email, team_name);
+                    if (response.status == 200) {
+                        alert("회원가입 성공! 로그인 버튼을 눌러주세요.");
+                    } else if (response.status == 400) {
+                        alert("Bad Request");
+                    } else if (response.status == 500) {
+                        alert("Server error");
+                    }
+                },
+                (error)=>{
+                    console.log(error);              
+                    if (error.code!=null) {
+                        alert("로그인 실패, 가입된 회원이 아니라면 먼저 회원가입을 진행해 주세요.");
+                    }  
+                });
+            }  
         
     
   return (
     <div className="home-main">              
         <div className="signup-main">
         <img className="univcertlogo" src={univcertlogo} onClick={goToHome}/>
-            <div className="body-outer" >                        
+            <div className="body-outer" >  
+
+    {mypage?
+
+            <div id="MODAL_BODY" class="ModalBody Body_body__KI0OY SignUpOrLogin_modal__VDGVH">
+                    <div class="TextPanel_className__J3J2W">
+                        <h1>API 키 확인을 위한 마이페이지</h1>
+                    </div>
+                    <div class="InputPanel_wrapper__RXp1k">
+                        <input class="InputPanel_password__my_BO" type="password" autocomplete="password"></input>
+                        <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
+                            <label for="email" class="style_label__BKYHB">도메인 명 (소속명) </label>
+                            <div class="style_body__A6XnO">
+                                <input type="text" id="email" value={team_name}></input>
+                            </div>
+                        </div>
+                        <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
+                            <label for="email" class="style_label__BKYHB">개발자 이메일 </label>
+                            <div class="style_body__A6XnO">
+                                <input type="email"  id="email" value={email}></input>
+                            </div>
+                        </div>
+                        <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
+                            <label for="email" class="style_label__BKYHB">API KEY</label>
+                            <div class="style_body__A6XnO">
+                                <input type="text"  id="email" value={apikey}></input>
+                            </div>
+                        </div>
+                        <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
+                            <label for="email" class="style_label__BKYHB">오늘 메일 발송 횟수 (최대 200)</label>
+                            <div class="style_body__A6XnO">
+                                <input type="email" id="email" value={emailmax}></input>
+                            </div>
+                        </div>            
+                    </div>
+                </div>
+
+                :
+
                 <div id="MODAL_BODY" class="ModalBody Body_body__KI0OY SignUpOrLogin_modal__VDGVH">
                     <div class="TextPanel_className__J3J2W">
                         <h1>API 키 확인을 위한 로그인</h1>
@@ -91,12 +164,15 @@ const Login = (response) => {
                             <div class="InputPanel_socialLogins__j0wq7">도메인 명을 잊어버리셨나요?</div>
                             <div class="InputPanel_divider__WEgZ3"></div>
                             <div class="InputPanel_socialWrapper__Dhaxo isKR">
-                            <img className="create-button" src={createaccountbutton}/>
+                            <img className="create-button" src={createaccountbutton} onClick={handleJoin}/>
                             </div>
                         </div>
                         <p class="style_wrapper__MbwMv">회원가입 시 <a class="loginModalAnchor" href="https://help.wanted.co.kr/hc/ko/articles/360035484292" target="_blank">개인정보 처리방침</a>과 <a class="loginModalAnchor" href="https://help.wanted.co.kr/hc/ko/articles/360035844551" target="_blank">이용약관</a>을 확인하였으며, 동의합니다.</p>
                     </div>
                 </div>
+
+    }
+
             </div>
         </div>
         <div className="advertisement-main">

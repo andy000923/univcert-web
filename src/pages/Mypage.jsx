@@ -3,18 +3,15 @@ import { useNavigate } from "react-router-dom";
 import loginlogo from "../assets/loginlogo.png"
 import univcertlogo from "../assets/UNIVCERT.png"
 import ContactUsButton from "../components/ContactUsButton"
-import Login from "../pages/Login"
 import axios from "axios";
 import "./Mypage.css"
 
-const Mypage = (response) => {
+const Mypage = ({setemail}) => {
     const navigate = useNavigate();
     const goToHome = () => {
         navigate("/");
     };
     const baseUrl = 'https://univcert.com/api';
-
-    const [email, setemail] = useState();
     const [team_name, setteam_name] = useState();
     const [emailmax, setemailmax] = useState();
     const [apikey, setapikey] = useState();
@@ -40,7 +37,7 @@ const Mypage = (response) => {
                         <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
                             <label for="email" class="style_label__BKYHB">개발자 이메일 </label>
                             <div class="style_body__A6XnO">
-                                <input type="email"  id="email" value={email}></input>
+                                <input type="email"  id="email" value={setemail}></input>
                             </div>
                         </div>
                         <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">

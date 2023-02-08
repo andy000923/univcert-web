@@ -274,6 +274,9 @@ button {
     width: 30%;
     cursor : pointer;
 }
+.create-button{
+    cursor: pointer;
+}
 .button-container{
     vertical-align: bottom;
 }
