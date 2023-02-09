@@ -98,8 +98,8 @@ const Login = () => {
     <div className="home-main">              
         <div className="signup-main">
             <div className="login-header">
-                <img className="logoimg" src={logoimg} onClick={goToHome}/>
-                <img className="univcertlogo" src={univcertlogo} onClick={goToHome}/>
+                <img className="logoimg" alt="logo" src={logoimg} onClick={goToHome}/>
+                <img className="univcertlogo" alt="logo" src={univcertlogo} onClick={goToHome}/>
             </div>
             <div className="body-outer" >  
 
@@ -168,7 +168,7 @@ const Login = () => {
                             <div class="InputPanel_divider__WEgZ3"></div>
                             <div class="InputPanel_socialWrapper__Dhaxo isKR">
                             <div class="InputPanel_socialLogins__j0wq7">아직 회원이 아니신가요?</div>
-                            <img className="create-button" src={createaccountbutton} onClick={handleJoin}/>
+                            <img className="create-button" alt="API 키 만들기" src={createaccountbutton} onClick={handleJoin}/>
                             </div>
                         </div>
                         <p class="style_wrapper__MbwMv">회원가입 시 도메인 명과 개발자 이메일을 기입한 후 버튼을 누릅니다.</p>
@@ -180,7 +180,7 @@ const Login = () => {
             </div>
         </div>
         <div className="advertisement-main">
-            <img className="loginlogo" src={loginlogo}/>
+            <img className="loginlogo" alt="로그인" src={loginlogo}/>
             <div className="button-container">
                 <ContactUsButton/>
             </div>
