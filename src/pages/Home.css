@@ -48,15 +48,23 @@
   margin-left: 5px;
   font-weight: 600;
 }
-
+.titletext{
+  font-size: 1.9rem;
+}
+.plustext {
+  font-size: 1rem;
+}
 .improve-your-deliver {
-  margin-top: 20px;
-  margin-bottom: 45px;
+  margin-top: -15px;
+  margin-bottom: 35px;
   margin-left: 5px;
   font-size: 1rem;
   line-height: 26px;
 }
-
+.oneline{
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+}
 .frame-6-instance-1 {
   width: 100%;
   flex-basis: 16%;
@@ -87,17 +95,7 @@
   flex-basis: 74%;
 }
 
-.info-container{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 16px;
-  gap: 10px;
-  width: 543px;
-  font-size: .813rem;
-  background: #E1E1E1;
-  border-radius: 4px;
-}
+
 .group-83 {
   object-fit: cover;
 }
@@ -269,9 +267,9 @@ flex-grow: 0;
   margin-left: 9px;
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius: 0% 50% 50% 50%;
-  width : 90px;
-  height: 90px;
+  border-radius: 0% 30% 30% 30%;
+  width : 150px;
+  height: 55px;
 }
 .check-text{
   margin-left: -17px;
@@ -360,7 +358,20 @@ code.hljs {
     padding: 3px 3px;
     margin-left: 40px;
 }
+.info-container{
+  font-family: 'ABeeZee';
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px;
+  width: 543px;
+  font-size: .893rem;
+  background: #E1E1E1;
+  border-radius: 4px;
+}
+
 .hljs {
+  font-family: 'ABeeZee';
     background: #BBD8FC;
     color: #000000;
     background-color: transparent!important;
@@ -377,8 +388,14 @@ code.hljs {
 .hljs-purple{
     color: #9747FF;
 }
+.hljs-white{
+  color: #fff;
+}
+.hljs-punctuation{
+  color: #FF8A1E;
+}
 code, kbd, pre, samp {
-    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-family: 'ABeeZee';
     font-size: 1rem;
 }
 .code-container {
