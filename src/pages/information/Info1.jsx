@@ -2,8 +2,8 @@ import "./Info.css"
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import ContactUsButton from '../../components/ContactUsButton';
-import f1_1 from "../../assets/f1-1.png";
-import f1_2 from "../../assets/f1-2.png";
+import f1_1 from "../../assets/f1_1.png";
+import f1_2 from "../../assets/f1_2.png";
 import reference from "../../assets/REFERENCE.png";
 import Frame1 from "../../assets/Frame1.png";
 import Frame2 from "../../assets/Frame2.png";
@@ -49,6 +49,19 @@ const Info1 = () => {
         </div>
         <div className="img-container">
             <img className="FrameImg" src={f1_1} />
+            <div className="gradle-container">
+              <code className="code-container1">
+                  <span>repositories&#123;</span><br/>
+                  <span >&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;maven&#123;url 'https://jitpack.io'&#125;</span><br/>
+                  <span>&#125;</span><br/><br/>
+                  <span>dependencies&#123;</span><br/>
+                  <span >&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;implementation <span class="hljs-red">'com.github.in-seo:univcert:master-SNAPSHOT'</span></span><br/>
+                  <span >&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
+                  <span class="hljs-punctuation">&#125; </span>
+              </code>
+            </div>
             <img className="FrameImg" src={f1_2} />
         </div>
         <div className="contact-container">
