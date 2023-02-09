@@ -111,10 +111,10 @@ const Home = () => {
         
           <div className="flex-container">
             <span className="email-validation-and">
-            <br/> 대학 인증 API
+            <br/> 메일(+대학) 인증 API
             </span>
             <span className="improve-your-deliver">
-            <br/> 단 두줄의 코드로 <br/> 사용자의 메일과 대학 재학 여부를 인증하세요
+            <br/> 단 <span class="hljs-pink">한 줄</span>의 코드로 <br/> 사용자의 메일과 대학 재학 여부까지 인증해 보세요.
             </span>
 
             {univcheck? 
@@ -147,7 +147,7 @@ const Home = () => {
                 UnivCert.certify("private Key", {email}, {univName}, true);
               </div>
               <div class="code-container">
-                <pre class="flex items-center h-64 bg-gray-700 rounded shadow-xl ">                        
+                <pre class="flex items-center h-64 rounded shadow-xl ">                        
                   {color?
                     <code class="language-json hljs">
                       <span class="hljs-punctuation">&#123; </span><br/>

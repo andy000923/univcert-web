@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import loginlogo from "../assets/loginlogo.png"
 import univcertlogo from "../assets/UNIVCERT.svg"
+import logoimg from "../assets/logoimg.svg"
 import ContactUsButton from "../components/ContactUsButton"
 import createaccountbutton from "../assets/CreateAccountButton.svg"
 import axios from "axios";
@@ -96,7 +97,10 @@ const Login = () => {
   return (
     <div className="home-main">              
         <div className="signup-main">
-            <img className="univcertlogo" src={univcertlogo} onClick={goToHome}/>
+            <div className="login-header">
+                <img className="logoimg" src={logoimg} onClick={goToHome}/>
+                <img className="univcertlogo" src={univcertlogo} onClick={goToHome}/>
+            </div>
             <div className="body-outer" >  
 
             {mypage?

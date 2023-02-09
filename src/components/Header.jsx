@@ -19,7 +19,7 @@ const Header = (props) => {
   return (
     <div className="frame-32-instance-1">
       <div className={`frame-32 ${props.className || ""}`}>
-        <img className="kakao-talk-photo-2023" src={univcertlogo} onClick={goToHome}/>
+        <img className="univecertlogo" src={univcertlogo} onClick={goToHome}/>
         <div className="letter-frame">
           <div className="api-container">
             <span className="ap-is">APIs</span>

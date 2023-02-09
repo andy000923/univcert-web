@@ -50,6 +50,7 @@
 }
 
 .improve-your-deliver {
+  margin-top: 20px;
   margin-bottom: 45px;
   margin-left: 5px;
   font-size: 1rem;
@@ -360,8 +361,8 @@ code.hljs {
     margin-left: 40px;
 }
 .hljs {
-    background: #19467e;
-    color: #fff;
+    background: #BBD8FC;
+    color: #000000;
     background-color: transparent!important;
 }
 .hljs-green{
@@ -369,6 +370,9 @@ code.hljs {
 }
 .hljs-red{
   color: #D30000;
+}
+.hljs-pink{
+  color: #D68A8A;
 }
 .hljs-purple{
     color: #9747FF;
@@ -379,6 +383,8 @@ code, kbd, pre, samp {
 }
 .code-container {
 width : 100%;
+background: #BBD8FC;
+border-radius: 5px;
 }
 
 .footer-container {
