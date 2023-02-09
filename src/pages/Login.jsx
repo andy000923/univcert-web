@@ -51,7 +51,7 @@ const Login = () => {
                     setapikey(response.data.data.key);
                     setmypage(true);
                 } else if (response.status == 400) {
-                    alert("로그인 실패, 가입된 회원이 아니라면 먼저 회원가입을 진행해 주세요.");
+                    alert("로그인 실패, API 키 발급을 위해 먼저 회원가입을 진행해 주세요.");
                 } else if (response.status == 500) {
                     alert("Server error");
                 }
@@ -59,7 +59,7 @@ const Login = () => {
             (error)=>{
                 console.log(error);              
                 if (error.code!=null) {
-                    alert("로그인 실패, 가입된 회원이 아니라면 먼저 회원가입을 진행해 주세요.");
+                    alert("로그인 실패, API 키 발급을 위해 먼저 회원가입을 진행해 주세요.");
                 }  
             });
         }
@@ -88,7 +88,7 @@ const Login = () => {
                 (error)=>{
                     console.log(error);              
                     if (error.code!=null) {
-                        alert("로그인 실패, 가입된 회원이 아니라면 먼저 회원가입을 진행해 주세요.");
+                        alert("로그인 실패, API 키 발급을 위해 먼저 회원가입을 진행해 주세요.");
                     }  
                 });
             }  
