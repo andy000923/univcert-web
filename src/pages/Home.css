@@ -360,7 +360,6 @@ code.hljs {
     margin-left: 40px;
 }
 .hljs {
-  
     background: #19467e;
     color: #fff;
     background-color: transparent!important;
@@ -371,7 +370,9 @@ code.hljs {
 .hljs-red{
   color: #D30000;
 }
-
+.hljs-purple{
+    color: #9747FF;
+}
 code, kbd, pre, samp {
     font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     font-size: 1rem;

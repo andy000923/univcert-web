@@ -155,7 +155,7 @@ const Home = () => {
                           <span class="hljs-red"> "domain"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">{domain}</span><span class="hljs-punctuation">,</span> <br/>
                           <span class="hljs-red"> "univ_email"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{email1}</span><span class="hljs-punctuation">,</span><br/>
                           <span class="hljs-red"> "univ_name"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{univName1}</span><span class="hljs-punctuation">,</span><br/>
-                          <span class="hljs-red"> "success"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{success}</span><br/>
+                          <span class="hljs-red"> "success"</span><span class="hljs-punctuation">:</span> <span class="hljs-purple">{success}</span><br/>
                       <span class="hljs-punctuation">&#125; </span>
                     </code>
                     :
@@ -165,7 +165,7 @@ const Home = () => {
                           <span class="hljs-green"> "domain"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">{domain}</span><span class="hljs-punctuation">,</span> <br/>
                           <span class="hljs-green"> "univ_email"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{email1}</span><span class="hljs-punctuation">,</span><br/>
                           <span class="hljs-green"> "univ_name"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{univName1}</span><span class="hljs-punctuation">,</span><br/>
-                          <span class="hljs-green"> "success"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{success}</span><br/>
+                          <span class="hljs-green"> "success"</span><span class="hljs-punctuation">:</span> <span class="hljs-purple">{success}</span><br/>
                       <span class="hljs-punctuation">&#125; </span>
                     </code>
                   }
