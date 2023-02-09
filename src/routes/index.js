@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "../pages/Home.jsx";
 import Login from "../pages/Login.jsx";
-import Mypage from "../pages/Mypage.jsx";
 import Info1 from "../pages/information/Info1.jsx";
 import Info2 from "../pages/information/Info2.jsx";
 import Info3 from "../pages/information/Info3.jsx";
@@ -15,7 +14,6 @@ const RootRoute = () => {
             <Routes>
                 <Route path='/' element={<Home/>} />
                 <Route path='/login' element={<Login/>} />
-                <Route path='/mypage' element={<Mypage/>} />
                 <Route path='/instruction' element={<Info1/>} />
                 <Route path='/instruction1' element={<Info2/>} />
                 <Route path='/instruction2' element={<Info3/>} />

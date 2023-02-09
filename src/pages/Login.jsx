@@ -5,7 +5,6 @@ import univcertlogo from "../assets/UNIVCERT.png"
 import ContactUsButton from "../components/ContactUsButton"
 import createaccountbutton from "../assets/CreateAccountButton.png"
 import axios from "axios";
-import Mypage from "./Mypage";
 import "./Login.css"
 
 const Login = () => {
@@ -77,12 +76,12 @@ const Login = () => {
                 .then(response=>{
                     console.log(response);
                     console.log(email, team_name);
-                    if (response.status == 200) {
+                    if (email === null) {
+                        alert("이메일을 입력해주세요.");
+                    } else if (response.data.code == 400) {
+                        alert(response.data.message);
+                    } else if (response.data.code == 200) {
                         alert("회원가입 성공! 로그인 버튼을 눌러주세요.");
-                    } else if (response.status == 400) {
-                        alert("Bad Request");
-                    } else if (response.status == 500) {
-                        alert("Server error");
                     }
                 },
                 (error)=>{
@@ -152,7 +151,7 @@ const Login = () => {
                         <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
                             <label for="email" class="style_label__BKYHB">개발자 이메일 </label>
                             <div class="style_body__A6XnO">
-                                <input type="email" onChange={handleChange_email} placeholder="예) abc@gmail.com" id="email" value={email}></input>
+                                <input type="email" onChange={handleChange_email} placeholder="예) abc@gmail.com" id="email" value={email} minLength="4"></input>
                             </div>
                         </div>
                         <div class="InputPanel_buttons__w391m">
@@ -167,7 +166,7 @@ const Login = () => {
                             <img className="create-button" src={createaccountbutton} onClick={handleJoin}/>
                             </div>
                         </div>
-                        <p class="style_wrapper__MbwMv">회원가입 시 <a class="loginModalAnchor" href="https://help.wanted.co.kr/hc/ko/articles/360035484292" target="_blank">개인정보 처리방침</a>과 <a class="loginModalAnchor" href="https://help.wanted.co.kr/hc/ko/articles/360035844551" target="_blank">이용약관</a>을 확인하였으며, 동의합니다.</p>
+                        <p class="style_wrapper__MbwMv">회원가입 시 도메인 명과 개발자 이메일을 기입한 후 버튼을 누릅니다.</p>
                     </div>
                 </div>
 

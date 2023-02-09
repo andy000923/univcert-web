@@ -365,9 +365,13 @@ code.hljs {
     color: #fff;
     background-color: transparent!important;
 }
-.hljs-attr{
+.hljs-green{
   color: #048611;
 }
+.hljs-red{
+  color: #D30000;
+}
+
 code, kbd, pre, samp {
     font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     font-size: 1rem;

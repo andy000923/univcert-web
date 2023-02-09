@@ -2,14 +2,13 @@ import React, {useState} from 'react';
 import {useEffect} from 'react';
 import axios from 'axios';
 import "./Home.css";
-import styled from 'styled-components';
 import group170 from "../assets/Group170.svg";
 import checkbox from "../assets/checkbox.png";
 import Header from "../components/Header";
 import ContactUsButton from '../components/ContactUsButton';
 const Home = () => {
   const baseUrl = 'https://univcert.com:8080/api';
-    const [color, setcolor] = useState();
+    const [color, setcolor] = useState(false);
     const [email, setemail] = useState();
     const [email1, setemail1] = useState();
     const [domain, setdomain] = useState();
@@ -59,9 +58,7 @@ const Home = () => {
               }  
           });
         }
-        const Title = styled.span`
-          color: #048611;
-        `;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         axios.defaults.withCredentials = true;
@@ -82,20 +79,24 @@ const Home = () => {
                 if (response.data.status === 200) {          
                   alert("Success");  
                   setsuccess("true");
+                  setcolor(false);
                 }
                 else if (response.data.status === 400) {
                   alert("Bad Request , expected : "+(response.data.expected));
                   setsuccess("false");
+                  setcolor(true);
                 }
                 else if (response.data.code != null) {
                   alert((response.data.message));
                   setsuccess("false");
+                  setcolor(true);
                 }
             },
             (error)=>{
                 console.log(error); 
               if (error.code != null) {
                     alert(error.message);
+                    setcolor(true);
                 }  
             });
     }
@@ -135,15 +136,28 @@ const Home = () => {
               </div>
               <div class="code-container">
                 <pre class="flex items-center h-64 bg-gray-700 rounded shadow-xl ">                        
-                  <code class="language-json hljs">
-                    <span class="hljs-punctuation">&#123; </span><br/>
-                        <Title> "status"</Title><span class="hljs-punctuation">:</span> <span class="hljs-number">{status}</span><span class="hljs-punctuation">,</span><br/>
-                        <span class="hljs-attr"> "domain"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">{domain}</span><span class="hljs-punctuation">,</span> <br/>
-                        <span class="hljs-attr"> "univ_email"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{email1}</span><span class="hljs-punctuation">,</span><br/>
-                        <span class="hljs-attr"> "univ_name"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{univName1}</span><span class="hljs-punctuation">,</span><br/>
-                        <span class="hljs-attr"> "success"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{success}</span><br/>
-                    <span class="hljs-punctuation">&#125; </span>
-                  </code>
+                  {color?
+                    <code class="language-json hljs">
+                      <span class="hljs-punctuation">&#123; </span><br/>
+                          <span class="hljs-red"> "status"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">{status}</span><span class="hljs-punctuation">,</span><br/>
+                          <span class="hljs-red"> "domain"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">{domain}</span><span class="hljs-punctuation">,</span> <br/>
+                          <span class="hljs-red"> "univ_email"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{email1}</span><span class="hljs-punctuation">,</span><br/>
+                          <span class="hljs-red"> "univ_name"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{univName1}</span><span class="hljs-punctuation">,</span><br/>
+                          <span class="hljs-red"> "success"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{success}</span><br/>
+                      <span class="hljs-punctuation">&#125; </span>
+                    </code>
+                    :
+                    <code class="language-json hljs">
+                      <span class="hljs-punctuation">&#123; </span><br/>
+                          <span class="hljs-green"> "status"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">{status}</span><span class="hljs-punctuation">,</span><br/>
+                          <span class="hljs-green"> "domain"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">{domain}</span><span class="hljs-punctuation">,</span> <br/>
+                          <span class="hljs-green"> "univ_email"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{email1}</span><span class="hljs-punctuation">,</span><br/>
+                          <span class="hljs-green"> "univ_name"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{univName1}</span><span class="hljs-punctuation">,</span><br/>
+                          <span class="hljs-green"> "success"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">{success}</span><br/>
+                      <span class="hljs-punctuation">&#125; </span>
+                    </code>
+                  }
+                  
                 </pre>
               </div>
             </div>        
