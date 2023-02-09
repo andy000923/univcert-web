@@ -147,7 +147,7 @@ const Home = () => {
             <div className="checkbox-container">
               <img src={checkbox} className="checkbox"/>
               <ul class="checkbox-content">
-                <p className='check-text'>메일만 인증하는 <br/> 테스트를 위해서는 <br/> APIs 페이지를 <br/> 참고해주세요.</p>
+                <p className='check-text'>대학 인증이 불필요하신 분은 <br/> APIs 페이지를 참고해주세요.</p>
               </ul>
             </div>
           </div>
