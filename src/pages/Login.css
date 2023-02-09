@@ -1,6 +1,6 @@
 .home-main{
     display: inline-flex;
-    max-width: 1432px;
+    width: 100%;
 }
 
 .signup-modal-header{
@@ -36,10 +36,10 @@
     min-width: 400px;
 }
 .Body_body__KI0OY {
-    padding-right: 15%;
-    padding-left: 15%;
+    margin: 0 auto;
     align-items: center;
     margin-top: 70px;
+    max-width: 300px;;
 }
 .TextPanel_className__J3J2W {
     text-align: center;
@@ -243,7 +243,7 @@ button {
     border-radius: 28px;
 }
 .style_wrapper__MbwMv {
-    margin-top: 26px;
+    margin-top: -5px;
     text-align: center;
     font-size: 10px;
     line-height: 18px;
@@ -259,15 +259,16 @@ button {
 }
 .loginlogo{
     min-width: 500px;
+    max-width: 700px;
     width: 100%;
-    vertical-align: middle;
+    margin: 0 auto;
 }
 
 .univcertlogo{
-    margin-left: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-top: 10%;
     width: 30%;
+    max-width: 150px;
     cursor : pointer;
 }
 .create-button{
