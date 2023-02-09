@@ -3,7 +3,7 @@ import "./Header.css";
 import expandMore1 from "../assets/expandMore1.svg";
 import univcertlogo from "../assets/UNIVCERT.svg"
 import SideBar from "./SideBar";
-const Header = (props) => {
+const Header = () => {
 
   const navigate = useNavigate();
   const goToHome = () => {
@@ -18,8 +18,8 @@ const Header = (props) => {
 
   return (
     <div className="frame-32-instance-1">
-      <div className={`frame-32 ${props.className || ""}`}>
-        <img className="univecertlogo" src={univcertlogo} onClick={goToHome}/>
+      <div className="frame-32">
+        <img className="univcertlogo" src={univcertlogo} onClick={goToHome}/>
         <div className="letter-frame">
           <div className="api-container">
             <span className="ap-is">APIs</span>

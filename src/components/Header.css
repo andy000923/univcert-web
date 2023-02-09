@@ -1,25 +1,15 @@
 .frame-32-instance-1 {
   margin-top: 30px;
   margin-bottom: 40px;
-  margin-left: 5%;
-  width: 90%;
-  flex-basis: 12%;
-  align-items: center;
+  width: 100%;
 }
 
 .frame-32 {
-  width: 90%;
-  color: #262626;
-  background-color: #fff;
+  width: 80%;
+  margin: 0 auto;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1px;
-  padding-right: 10px;
-  font-family: SF Pro Display, Arial;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 26px;
   display: flex;
 }
 .letter-frame{
@@ -31,19 +21,10 @@
   align-items: center;
   padding-bottom: 1px;
   margin-right: 40px;
-  font-family: SF Pro Display, Arial;
   font-size: 1rem;
   font-weight: 500;
   line-height: 26px;
   display: flex;
-}
-.kakao-talk-photo-2023 {
-  cursor: pointer;
-  object-fit: cover;
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 1px;
-  margin-right: 0px;
 }
 .api-container{
   display: flex;

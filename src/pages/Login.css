@@ -33,13 +33,13 @@
     height  : 100%;
 }
 .body-outer{
-    min-width: 400px;
+    min-width: 500px;
 }
 .Body_body__KI0OY {
     margin: 0 auto;
     align-items: center;
-    margin-top: 70px;
-    max-width: 300px;;
+    margin-top:110px;
+    width: 370px;
 }
 .TextPanel_className__J3J2W {
     text-align: center;
