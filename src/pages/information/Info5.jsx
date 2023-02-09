@@ -40,12 +40,12 @@ const Info5= () => {
         <div className="frame-container">
           <img className="Frame" src={Frame1} onClick={goTo1}/>
           <img className="Fmain" src={Fmain} />
-          <img className="Frame" src={Frame2} onClick={goTo2}/>
-          <img className="Frame" src={Frame3} onClick={goTo3}/>
+          <img className="Frame" alt="이용자 메일 인증 시작" src={Frame2} onClick={goTo2}/>
+          <img className="Frame" alt="발송된 인증코드 입력" src={Frame3} onClick={goTo3}/>
           <img className="Fexport" src={Fexport}/>
-          <img className="Frame" src={Frame4} onClick={goTo4}/>
-          <img className="Frame" src={Frame5} onClick={goTo5}/>
-          <img className="Frame" src={Frame7} onClick={goTo7}/>
+          <img className="Frame" alt="인증된 이메일인지 확인" src={Frame4} onClick={goTo4}/>
+          <img className="Frame" alt="인증된 유저 리스트 출력" src={Frame5} onClick={goTo5}/>
+          <img className="Frame" alt="대학명 체크" src={Frame7} onClick={goTo7}/>
         </div>
         <div className="img-container">
             <img className="FrameImg" src={f5} />

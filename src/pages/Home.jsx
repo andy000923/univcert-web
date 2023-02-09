@@ -123,7 +123,7 @@ const Home = () => {
             {univcheck? 
             <div className="univName-container">
               <input type="text" className="univName-input" required={true} value={univName} onChange={handleChange_univName} placeholder=" ex) 홍익대학교"/>
-              <button type="submit" className="test-button" onClick={handleCheckUniv}><img className='checkimg' alt="checkimg" src={checkimg}/></button>
+              <button type="submit" className="test-button" onClick={handleCheckUniv}><img className='checkimg' src={checkimg}/></button>
             </div> 
             :
             <div className="univName-container">
@@ -145,9 +145,9 @@ const Home = () => {
             }
             
             <div className="checkbox-container">
-              <img src={checkbox} alt="checkbox" className="checkbox"/>
-              <ul className="checkbox-content">
-                <p className='check-text'>대학인증이 불필요하신 분은<br/>APIs 페이지를 참고해주세요.</p>
+              <img src={checkbox} className="checkbox"/>
+              <ul class="checkbox-content">
+                <p className='check-text'>메일만 인증하는 <br/> 테스트를 위해서는 <br/> APIs 페이지를 <br/> 참고해주세요.</p>
               </ul>
             </div>
           </div>
@@ -189,7 +189,7 @@ const Home = () => {
       </div>
       <div className='footer-container'>
         <div className="flex-container-2">
-          <img className="group170" alt="" src={group170} />
+          <img className="group170" src={group170} />
         </div>
         <ContactUsButton/>
       </div>
