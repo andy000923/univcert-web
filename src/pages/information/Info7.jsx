@@ -7,36 +7,35 @@ import Fexport from "../../assets/export.svg";
 import Frame1 from "../../assets/Frame1off.svg";
 import Frame2 from "../../assets/Frame2.svg";
 import Frame3 from "../../assets/Frame3.svg";
-import Frame4 from "../../assets/Frame4on.svg";
+import Frame4 from "../../assets/Frame4.svg";
 import Frame5 from "../../assets/Frame5.svg";
-import Frame7 from "../../assets/Frame7.svg";
-import f4 from "../../assets/f4.png";
-const Info4= () => {
-  const navigate = useNavigate();
+import Frame7 from "../../assets/Frame7on.svg";
+const Info7= () => {
+const navigate = useNavigate();
 
-  const goTo1 = () => {
+const goTo1 = () => {
     navigate("/instruction");
-  };
-  const goTo2 = () => {
+};
+const goTo2 = () => {
     navigate("/instruction1");
-  };
-  const goTo3 = () => {
+};
+const goTo3 = () => {
     navigate("/instruction2");
-  };
-  const goTo4 = () => {
+};
+const goTo4 = () => {
     navigate("/instruction3");
-  };
-  const goTo5 = () => {
+};
+const goTo5 = () => {
     navigate("/instruction4");
-  };
-  const goTo7 = () => {
+};
+const goTo7 = () => {
     navigate("/instruction5");
-  };
-  return (
+};
+return (
     <div className="slide1">
-      <Header/>
+    <Header/>
 
-      <div className="container">
+    <div className="container">
         <div className="frame-container">
           <img className="Frame" src={Frame1} onClick={goTo1}/>
           <img className="Fmain" src={Fmain} />
@@ -48,14 +47,14 @@ const Info4= () => {
           <img className="Frame" src={Frame7} onClick={goTo7}/>
         </div>
         <div className="img-container">
-            <img className="FrameImg" src={f4} />
+            
         </div>
         <div className="contact-container">
             <ContactUsButton/>
         </div>
-      </div>
+    </div>
 
     </div>
-  );
+);
 };
-export default Info4;
+export default Info7;

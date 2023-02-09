@@ -4,13 +4,13 @@ import Header from "../../components/Header";
 import ContactUsButton from '../../components/ContactUsButton';
 import f1_1 from "../../assets/f1_1.png";
 import f1_2 from "../../assets/f1_2.png";
-import reference from "../../assets/REFERENCE.png";
-import Frame1 from "../../assets/Frame1.png";
-import Frame2 from "../../assets/Frame2.png";
-import Frame3 from "../../assets/Frame3.png";
-import Frame4 from "../../assets/Frame4.png";
-import Frame5 from "../../assets/Frame5.png";
-import Frame6 from "../../assets/Frame6.png";
+import reference from "../../assets/REFERENCE.svg";
+import Frame1 from "../../assets/Frame1.svg";
+import Frame2 from "../../assets/Frame2.svg";
+import Frame3 from "../../assets/Frame3.svg";
+import Frame4 from "../../assets/Frame4.svg";
+import Frame5 from "../../assets/Frame5.svg";
+import Frame6 from "../../assets/Frame6.svg";
 const Info1 = () => {
   const navigate = useNavigate();
 

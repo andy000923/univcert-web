@@ -1,6 +1,6 @@
 import "./ContactUsButton.css";
-import Button9 from "../assets/Button9.png";
-import image9 from "../assets/image9.png";
+import Button9 from "../assets/Button9.svg";
+import image9 from "../assets/image9.svg";
 const ContactUsButton = (props) => {
   return (
     <div className="flex-container-5">

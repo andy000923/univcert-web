@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import expandMore1 from "../assets/expandMore1.svg";
-import univcertlogo from "../assets/UNIVCERT.png"
+import univcertlogo from "../assets/UNIVCERT.svg"
 import SideBar from "./SideBar";
 const Header = (props) => {
 
@@ -28,9 +28,8 @@ const Header = (props) => {
               <SideBar/>
             </ul>
           </div>
-          <span className="login" onClick={goToLogin}>Login</span>
           <button className="frame-31" onClick={goToLogin}>API 키 발급</button>
-          </div>
+        </div>
       </div>
     </div>
   );

@@ -3,12 +3,14 @@ import {useEffect} from 'react';
 import axios from 'axios';
 import "./Home.css";
 import group170 from "../assets/Group170.svg";
-import checkbox from "../assets/checkbox.png";
+import checkbox from "../assets/checkbox.svg";
 import Header from "../components/Header";
 import ContactUsButton from '../components/ContactUsButton';
+import checkimg from "../assets/univcheck.svg";
 const Home = () => {
   const baseUrl = 'https://univcert.com:8080/api';
     const [color, setcolor] = useState(false);
+    const [univcheck, setunivcheck] = useState(false);
     const [email, setemail] = useState();
     const [email1, setemail1] = useState();
     const [domain, setdomain] = useState();
@@ -45,7 +47,8 @@ const Home = () => {
           .then(response=>{
             console.log(response);
             if (response.data.code == null) {          
-              alert("테스트가 가능한 학교명입니다!");    
+              alert("테스트가 가능한 학교명입니다!"); 
+              setunivcheck(true);   
             }
             else if (response.data.code != null) {
               alert((response.data.message));
@@ -113,10 +116,19 @@ const Home = () => {
             <span className="improve-your-deliver">
             <br/> 단 두줄의 코드로 <br/> 사용자의 메일과 대학 재학 여부를 인증하세요
             </span>
+
+            {univcheck? 
+            <div className="univName-container">
+              <input type="text" className="univName-input" required={true} value={univName} onChange={handleChange_univName} placeholder=" ex) 홍익대학교"/>
+              <button type="submit" className="test-button" onClick={handleCheckUniv}><img className='checkimg' src={checkimg}/></button>
+            </div> 
+            :
             <div className="univName-container">
               <input type="text" className="univName-input" required={true} value={univName} onChange={handleChange_univName} placeholder=" ex) 홍익대학교"/>
               <button type="submit" className="test-button" onClick={handleCheckUniv}>대학명 체크</button>
-            </div>   
+            </div> 
+            }
+
             <div className="email-container">
               <input type="email" className="email-input" required={true} value={email} onChange={handleChange_email} placeholder=" ex) abc123@mail.hongik.ac.kr"/>
               <button type="submit" className="test-button" onClick={handleSubmit}>테스트</button>

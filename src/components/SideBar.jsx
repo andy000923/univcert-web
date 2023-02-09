@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import "./SideBar.css";
-import reference from "../assets/REFERENCE.png";
-import Frame1 from "../assets/Frame1off.png";
-import Frame2 from "../assets/Frame2.png";
-import Frame3 from "../assets/Frame3.png";
-import Frame4 from "../assets/Frame4.png";
-import Frame5 from "../assets/Frame5.png";
-import Frame6 from "../assets/Frame6.png";
+import reference from "../assets/REFERENCE.svg";
+import Frame1 from "../assets/Frame1off.svg";
+import Frame2 from "../assets/Frame2.svg";
+import Frame3 from "../assets/Frame3.svg";
+import Frame4 from "../assets/Frame4.svg";
+import Frame5 from "../assets/Frame5.svg";
+import Frame6 from "../assets/Frame6.svg";
 const SideBar = (props) => {
   const navigate = useNavigate();
 

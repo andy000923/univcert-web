@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import loginlogo from "../assets/loginlogo.png"
-import univcertlogo from "../assets/UNIVCERT.png"
+import univcertlogo from "../assets/UNIVCERT.svg"
 import ContactUsButton from "../components/ContactUsButton"
-import createaccountbutton from "../assets/CreateAccountButton.png"
+import createaccountbutton from "../assets/CreateAccountButton.svg"
 import axios from "axios";
 import "./Login.css"
 
