@@ -8,14 +8,16 @@
   height: 40px;
 }
 .flex-container-5 {
+  position: relative;
+  z-index: 999;
   margin-top: 10px;
   flex-direction: row;
   flex-basis: 4%;
   justify-content: right;
   align-items: stretch;
   display: flex;
-  position: absolute;
-    bottom: 30px;
-    right: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
 }
   
