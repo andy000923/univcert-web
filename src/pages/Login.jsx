@@ -96,10 +96,10 @@ const Login = () => {
   return (
     <div className="home-main">              
         <div className="signup-main">
-        <img className="univcertlogo" src={univcertlogo} onClick={goToHome}/>
+            <img className="univcertlogo" src={univcertlogo} onClick={goToHome}/>
             <div className="body-outer" >  
 
-    {mypage?
+            {mypage?
 
             <div id="MODAL_BODY" class="ModalBody Body_body__KI0OY SignUpOrLogin_modal__VDGVH">
                     <div class="TextPanel_className__J3J2W">
@@ -160,9 +160,10 @@ const Login = () => {
                                 로그인
                             </button>
                             
-                            <div class="InputPanel_socialLogins__j0wq7">도메인 명을 잊어버리셨나요?</div>
+                            
                             <div class="InputPanel_divider__WEgZ3"></div>
                             <div class="InputPanel_socialWrapper__Dhaxo isKR">
+                            <div class="InputPanel_socialLogins__j0wq7">아직 회원이 아니신가요?</div>
                             <img className="create-button" src={createaccountbutton} onClick={handleJoin}/>
                             </div>
                         </div>
@@ -170,7 +171,7 @@ const Login = () => {
                     </div>
                 </div>
 
-    }
+                }
 
             </div>
         </div>
