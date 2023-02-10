@@ -248,11 +248,11 @@ flex-grow: 0;
 }
 
 .checkbox{
-  width: 112px;
-  height: 20px;
+  width: 140px;
+  height: 25px;
   left: 332px;
   top: 591px;
-  margin-top: 7px;
+  margin-top: 10px;
   
 }
 .checkbox-container:hover .checkbox-content {
@@ -266,7 +266,7 @@ flex-grow: 0;
   margin-top: 0px;
   margin-left: 9px;
   background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   border-radius: 0% 30% 30% 30%;
   width : 150px;
   height: 55px;
