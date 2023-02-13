@@ -7,6 +7,7 @@ import Frame3 from "../assets/Frame3.svg";
 import Frame4 from "../assets/Frame4.svg";
 import Frame5 from "../assets/Frame5.svg";
 import Frame6 from "../assets/Frame6.svg";
+import Frame7 from "../assets/Frame7.svg";
 const SideBar = (props) => {
   const navigate = useNavigate();
 
@@ -25,7 +26,9 @@ const SideBar = (props) => {
   const goTo5 = () => {
     navigate("/instruction4");
   };
-
+  const goTo7 = () => {
+    navigate("/instruction5");
+  }
 
   return (
     <div className="frame1-container">
@@ -35,6 +38,7 @@ const SideBar = (props) => {
         <img className="Frame1" src={Frame3} onClick={goTo3}/>
         <img className="Frame1" src={Frame4} onClick={goTo4}/>
         <img className="Frame1" src={Frame5} onClick={goTo5}/>
+        <img className="Frame1" src={Frame7} onClick={goTo7}/>
         <a href="https://incredible-raincoat-c52.notion.site/cdb55dd7ea5b475eaaf94ce76fa9eba4" target="_blank">
           <img className="Frame1" src={Frame6} />
         </a>
