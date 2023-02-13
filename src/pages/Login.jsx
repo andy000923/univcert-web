@@ -20,6 +20,7 @@ const Login = () => {
     const [apikey, setapikey] = useState();
     const [email, setemail] = useState();
     const [team_name, setteam_name] = useState();
+    const [joinbutton, setjoinbutton] = useState(false);
 
     const handleChange_email = (e)=>{
         e.preventDefault();
@@ -77,18 +78,21 @@ const Login = () => {
                 .then(response=>{
                     console.log(response);
                     console.log(email, team_name);
-                    if (email === null) {
+                    if (!email) {
                         alert("이메일을 입력해주세요.");
+                    } else if (team_name.length < 2 ) {
+                        alert("도메인 명 (소속명) 이 너무 짧습니다.");
                     } else if (response.data.code == 400) {
                         alert(response.data.message);
-                    } else if (response.data.code == 200) {
+                    } else if (response.status == 200) {
                         alert("회원가입 성공! 로그인 버튼을 눌러주세요.");
+                        setjoinbutton(true);
                     }
                 },
                 (error)=>{
                     console.log(error);              
                     if (error.code!=null) {
-                        alert("로그인 실패, API 키 발급을 위해 먼저 회원가입을 진행해 주세요.");
+                        alert("회원가입 실패. 서버 에러.");
                     }  
                 });
             }  
@@ -112,7 +116,7 @@ const Login = () => {
                     <div class="InputPanel_wrapper__RXp1k">
                         <input class="InputPanel_password__my_BO" type="password" autocomplete="password"></input>
                         <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
-                            <label for="email" class="style_label__BKYHB">도메인 명 (소속명) </label>
+                            <label for="email" maxlength='2' class="style_label__BKYHB">도메인 명 (소속명) </label>
                             <div class="style_body__A6XnO">
                                 <input type="text" id="email" value={team_name}></input>
                             </div>
@@ -167,8 +171,12 @@ const Login = () => {
                             
                             <div class="InputPanel_divider__WEgZ3"></div>
                             <div class="InputPanel_socialWrapper__Dhaxo isKR">
-                            <div class="InputPanel_socialLogins__j0wq7">아직 회원이 아니신가요?</div>
-                            <img className="create-button" alt="API 키 만들기" src={createaccountbutton} onClick={handleJoin}/>
+                                <div class="InputPanel_socialLogins__j0wq7">아직 회원이 아니신가요?</div>
+                                { joinbutton ?
+                                <p className="join-complete">"가입이 완료되었습니다. 로그인 버튼을 눌러주세요."</p>
+                                :
+                                <img className="create-button" alt="API 키 만들기" src={createaccountbutton} onClick={handleJoin}/>
+                                }
                             </div>
                         </div>
                         <p class="style_wrapper__MbwMv">회원가입 시 도메인 명과 개발자 이메일을 기입한 후 버튼을 누릅니다.</p>
