@@ -21,7 +21,8 @@ const Login = () => {
     const [email, setemail] = useState();
     const [team_name, setteam_name] = useState();
     const [joinbutton, setjoinbutton] = useState(false);
-
+    let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+    let testEmails = [email];
     const handleChange_email = (e)=>{
         e.preventDefault();
         setemail(e.target.value);
@@ -67,6 +68,7 @@ const Login = () => {
         const handleJoin = async (e) => {
             e.preventDefault();
             axios.defaults.withCredentials = true;
+            
             await axios
                 .post(baseUrl + "/join", {
                     email:email,
@@ -78,16 +80,16 @@ const Login = () => {
                 .then(response=>{
                     console.log(response);
                     console.log(email, team_name);
-                    if (!email) {
-                        alert("이메일을 입력해주세요.");
-                    } else if (team_name.length < 2 ) {
-                        alert("도메인 명 (소속명) 이 너무 짧습니다.");
-                    } else if (response.data.code == 400) {
-                        alert(response.data.message);
-                    } else if (response.status == 200) {
-                        alert("회원가입 성공! 로그인 버튼을 눌러주세요.");
-                        setjoinbutton(true);
-                    }
+                    testEmails.forEach((address) => {
+                        if(regex.test(address)==false){
+                            alert("이메일 형식이 올바르지 않습니다.");
+                        } else if (response.data.code == 400) {
+                            alert(response.data.message);
+                        } else if (response.status == 200) {
+                            alert("회원가입 성공! 로그인 버튼을 눌러주세요.");
+                            setjoinbutton(true);
+                        }
+                    });            
                 },
                 (error)=>{
                     console.log(error);              
@@ -173,7 +175,7 @@ const Login = () => {
                             <div class="InputPanel_socialWrapper__Dhaxo isKR">
                                 <div class="InputPanel_socialLogins__j0wq7">아직 회원이 아니신가요?</div>
                                 { joinbutton ?
-                                <p className="join-complete">"가입이 완료되었습니다. 로그인 버튼을 눌러주세요."</p>
+                                <p className="join-complete">"가입이 완료되었습니다.<br/>로그인 버튼을 눌러주세요."</p>
                                 :
                                 <img className="create-button" alt="API 키 만들기" src={createaccountbutton} onClick={handleJoin}/>
                                 }
