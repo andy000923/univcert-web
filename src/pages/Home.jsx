@@ -8,7 +8,7 @@ import Header from "../components/Header";
 import ContactUsButton from '../components/ContactUsButton';
 import checkimg from "../assets/univcheck.svg";
 const Home = () => {
-  const baseUrl = 'https://univcert.com:8080/api';
+  const baseUrl = 'https://univcert.com/api';
     const [color, setcolor] = useState(false);
     const [univcheck, setunivcheck] = useState(false);
     const [email, setemail] = useState();

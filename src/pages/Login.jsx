@@ -14,7 +14,7 @@ const Login = () => {
         navigate("/");
     };
     const [mypage, setmypage] = useState(false);
-    const baseUrl = 'https://univcert.com:8080/api';
+    const baseUrl = 'https://univcert.com/api';
 
     const [emailmax, setemailmax] = useState();
     const [apikey, setapikey] = useState();
