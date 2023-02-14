@@ -38,14 +38,14 @@ const Info1 = () => {
             <div className="gradle-container">
               <code className="code-container1">
                   <span>repositories&#123;</span><br/>
-                  <span >&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;maven&#123;url 'https://jitpack.io'&#125;</span><br/>
+                  <span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maven&#123;url 'https://jitpack.io'&#125;</span><br/>
                   <span>&#125;</span><br/><br/>
                   <span>dependencies&#123;</span><br/>
-                  <span >&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;implementation <span class="hljs-red">'com.github.in-seo:univcert:master-SNAPSHOT'</span></span><br/>
-                  <span >&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
-                  <span class="hljs-punctuation">&#125; </span>
+                  <span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;implementation <span class="hljs-red">'com.github.in-seo:univcert:master-SNAPSHOT'</span></span><br/>
+                  <span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
+                  <span>&#125; </span>
               </code>
             </div>
             <img className="FrameImg" src={f1_2} />

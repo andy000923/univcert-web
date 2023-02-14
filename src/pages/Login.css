@@ -27,6 +27,7 @@
     width: 100%;
     background-color:whitesmoke;
     height: 100vh;
+    min-height: 730px;
 }
 .SignUpOrLogin_modal__VDGVH {
     background-color: whitesmoke;

@@ -56,7 +56,14 @@
     border-radius: 10px;
 }
 .code-container1{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1rem;
     margin-left: 10px;
+    font-family: GmarketSansMedium;
 }
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
