@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://univcert.com
+
+# Sitemaps
+Sitemap: https://univcert.com/sitemap.xml

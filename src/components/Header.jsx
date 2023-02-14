@@ -22,7 +22,7 @@ const Header = () => {
         <img className="univcertlogo" src={univcertlogo} onClick={goToHome}/>
         <div className="letter-frame">
           <div className="api-container">
-            <span className="ap-is">APIs</span>
+            <span className="ap-is" onClick={goTo1} >APIs</span>
             <img type="button" className="api-button" alt="apis" src={expandMore1} onClick={goTo1}/>
             <ul class="dropdown-content">
               <SideBar/>

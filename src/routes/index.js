@@ -7,7 +7,6 @@ import Info3 from "../pages/information/Info3.jsx";
 import Info4 from "../pages/information/Info4.jsx";
 import Info5 from "../pages/information/Info5.jsx";
 import Info7 from "../pages/information/Info7.jsx";
-import Opengraph from "../components/Opengraphimg";
 const RootRoute = () => {
 
     return (
@@ -21,7 +20,6 @@ const RootRoute = () => {
                 <Route path='/instruction3' element={<Info4/>} />
                 <Route path='/instruction4' element={<Info5/>} />
                 <Route path='/instruction5' element={<Info7/>} />
-                <Route path='/opengraph-img.svg' element={<Opengraph/>}/>
             </Routes>
         </BrowserRouter>
     )

@@ -21,8 +21,10 @@ const Login = () => {
     const [email, setemail] = useState();
     const [team_name, setteam_name] = useState();
     const [joinbutton, setjoinbutton] = useState(false);
-    let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
-    let testEmails = [email];
+
+    const regexEmail = new RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
+    const regexTeam = new RegExp('^.{2,}$');
+    
     const handleChange_email = (e)=>{
         e.preventDefault();
         setemail(e.target.value);
@@ -47,14 +49,14 @@ const Login = () => {
             .then(response=>{
                 console.log(response);
                 console.log(email, team_name);
-                if (response.status == 200) {
+                if (response.status === 200) {
                     alert("로그인 성공!");
                     setemailmax(response.data.data.queryCount);
                     setapikey(response.data.data.key);
                     setmypage(true);
-                } else if (response.status == 400) {
+                } else if (response.status === 400) {
                     alert("로그인 실패, API 키 발급을 위해 먼저 회원가입을 진행해 주세요.");
-                } else if (response.status == 500) {
+                } else if (response.status === 500) {
                     alert("Server error");
                 }
             },
@@ -66,9 +68,14 @@ const Login = () => {
             });
         }
         const handleJoin = async (e) => {
+
+            if(regexEmail.test(email)===false){
+                alert("이메일 형식이 올바르지 않습니다.");
+            } else if (regexTeam.test(team_name)===false) {
+                alert("소속명을 2글자 이상 입력해주세요.");
+            } else {
             e.preventDefault();
             axios.defaults.withCredentials = true;
-            
             await axios
                 .post(baseUrl + "/join", {
                     email:email,
@@ -79,17 +86,14 @@ const Login = () => {
                   })
                 .then(response=>{
                     console.log(response);
-                    console.log(email, team_name);
-                    testEmails.forEach((address) => {
-                        if(regex.test(address)==false){
-                            alert("이메일 형식이 올바르지 않습니다.");
-                        } else if (response.data.code == 400) {
-                            alert(response.data.message);
-                        } else if (response.status == 200) {
-                            alert("회원가입 성공! 로그인 버튼을 눌러주세요.");
-                            setjoinbutton(true);
-                        }
-                    });            
+                    console.log(email, team_name);   
+                    if (response.data.code === 400) {
+                        alert(response.data.message);
+                    } else if (response.status === 200) {
+                        alert("회원가입 성공! 로그인 버튼을 눌러주세요.");
+                        setjoinbutton(true);
+                    }
+                           
                 },
                 (error)=>{
                     console.log(error);              
@@ -97,7 +101,8 @@ const Login = () => {
                         alert("회원가입 실패. 서버 에러.");
                     }  
                 });
-            }  
+            }
+        }  
         
     
   return (
