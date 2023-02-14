@@ -82,21 +82,24 @@ const Home = () => {
                 setdomain(response.data.domain);
                 setemail1(email);
                 setunivName1(univName);
+                var message = response.data.message;
                 if (response.data.status === 200) {              
                   setsuccess("true");
                   setcolor(false);
-                  alert("Success");  
+                  message = "success";
                 }
                 else if (response.data.status === 400) {
                   setsuccess("false");
                   setcolor(true);
-                  alert("잘못된 요청입니다, 예상 대학 도메인 : "+(response.data.expected));
+                  message = "잘못된 요청입니다, 예상 대학 도메인 : "+ response.data.expected;
                 }
                 else if (response.data.code != null) {
                   setsuccess("false");
                   setcolor(true);
-                  alert((response.data.message));
                 }
+                setTimeout(function(){
+                    alert(message);
+                }, 200);
             },
             (error)=>{
                 console.log(error); 
