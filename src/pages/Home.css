@@ -22,7 +22,9 @@
 }
 
 .rectangle-1 {
+  margin: 0 auto;
   color: #262626;
+  min-width: 1432px;
   width:100%;
   background: linear-gradient(#f2f2f200 0%, #2e56891a 100%);
 }
@@ -90,7 +92,7 @@
   align-self: center;
   align-items: stretch;
   margin-bottom: 19px;
-  margin-right: 10%;
+  margin-right: 183px;
   display: flex;
 }
 

@@ -14,8 +14,8 @@
     min-width: 900px;
 }
 .FrameImg{
-    width: 80%;
-    margin-left: 5%;
+    width: 90%;
+    margin-left: 30px;
 }
 
 .frame-container{
@@ -50,8 +50,8 @@
     padding: 16px;
     margin-top: 3px;
     margin-bottom: 10px;
-    margin-left: 84px;
-    margin-right: 188px;
+    margin-left: 67px;
+    margin-right: 109px;
     background: #EBEFF4;
     border-radius: 10px;
 }

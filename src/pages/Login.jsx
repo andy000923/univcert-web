@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
 import loginlogo from "../assets/loginlogo.png"
 import univcertlogo from "../assets/UNIVCERT.svg"
 import logoimg from "../assets/logoimg.svg"
@@ -109,7 +109,7 @@ const Login = () => {
     <div className="home-main">              
         <div className="signup-main">
             <div className="login-header">
-                <img className="logoimg" alt="logo" src={logoimg} onClick={goToHome}/>
+                <Link to="/" style={{ textDecoration: "none" , color:"black"}}><img className="logoimg" alt="logo" src={logoimg}/></Link>
                 <img className="univcertlogo" alt="logo" src={univcertlogo} onClick={goToHome}/>
             </div>
             <div className="body-outer" >  
