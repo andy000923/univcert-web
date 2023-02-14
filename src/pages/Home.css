@@ -384,7 +384,7 @@ pre code.hljs {
 }
 code.hljs {
     padding: 3px 3px;
-    margin-left: 40px;
+    margin-left: 23px;
     line-height: 2.0rem;
     font-family: 'GmarketSansMedium';
 }
@@ -420,6 +420,7 @@ code.hljs {
 }
 .hljs-white{
   color: #fff;
+  font-family: 'GmarketSansMedium';
 }
 .hljs-punctuation{
   color: #FF8A1E;

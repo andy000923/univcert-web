@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { useNavigate, Link} from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import loginlogo from "../assets/loginlogo.png"
 import univcertlogo from "../assets/UNIVCERT.svg"
 import logoimg from "../assets/logoimg.svg"
@@ -21,8 +21,9 @@ const Login = () => {
     const [email, setemail] = useState();
     const [team_name, setteam_name] = useState();
     const [joinbutton, setjoinbutton] = useState(false);
+
+    const regexTeam = new RegExp('.{2,20}');
     const regexEmail = new RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
-    const regexTeam = new RegExp('^.{2,}$');
     
     const handleChange_email = (e)=>{
         e.preventDefault();
@@ -64,15 +65,18 @@ const Login = () => {
                 }  
             });
         }
-        const handleJoin = async (e) => {
 
-            if(regexEmail.test(email)===false){
-                alert("이메일 형식이 올바르지 않습니다.");
-            } else if (regexTeam.test(team_name)===false) {
-                alert("소속명을 2글자 이상 입력해주세요.");
-            } else {
-            e.preventDefault();
-            axios.defaults.withCredentials = true;
+        
+    const handleJoin = async (e) => {       
+        e.preventDefault();
+        axios.defaults.withCredentials = true;
+        if (regexTeam.test(team_name)===false) {
+            alert("소속명을 2글자 이상 입력해주세요.");
+        }
+        else if(regexEmail.test(email)===false){
+            alert("이메일 형식이 올바르지 않습니다.");
+        }
+        else{
             await axios
                 .post(baseUrl + "/join", {
                     email:email,
@@ -80,7 +84,7 @@ const Login = () => {
                 },
                 {
                     withCredentials: true // 쿠키 cors 통신 설정
-                  })
+                    })
                 .then(response=>{
                     console.log(response); 
                     if (response.data.code === 400) {
@@ -88,16 +92,15 @@ const Login = () => {
                     } else if (response.status === 200) {
                         alert("회원가입 성공! 로그인 버튼을 눌러주세요.");
                         setjoinbutton(true);
-                    }
-                           
+                    }                    
                 },
                 (error)=>{
                     console.log(error);              
                     if (error.code!=null) {
-                        alert("회원가입 실패. 서버 에러.");
+                        alert("회원가입 실패. 도메인명 미입력.");
                     }  
-                });
-            }
+                });  
+            }        
         }  
         
     
@@ -156,7 +159,7 @@ const Login = () => {
                         <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
                             <label for="email" class="style_label__BKYHB">도메인 명 (소속명) </label>
                             <div class="style_body__A6XnO">
-                                <input type="text" onChange={handleChange_team_name} placeholder="예) univcert.com &nbsp; or &nbsp; 우아한형제들" id="email" value={team_name}></input>
+                                <input type="text" onChange={handleChange_team_name} placeholder="예) univcert.com &nbsp; or &nbsp; 우아한형제들" id="email" value={team_name} autofocus></input>
                             </div>
                         </div>
                         <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">

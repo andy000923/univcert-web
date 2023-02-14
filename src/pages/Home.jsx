@@ -131,7 +131,7 @@ const Home = () => {
             :
             <div className="univName-container">
               <input type="text" className="univName-input" required={true} value={univName} onChange={handleChange_univName} placeholder=" ex) 홍익대학교"/>
-              <button type="submit" className="test-button" onClick={handleCheckUniv}><span className="hljs-white">대학명 체크</span></button>
+              <button type="submit" className="test-button" onClick={handleCheckUniv}><span className="hljs-white">대학명체크</span></button>
             </div> 
             }
 
@@ -183,7 +183,6 @@ const Home = () => {
                       <span className="hljs-punctuation">&#125; </span>
                     </code>
                   }
-                  
                 </pre>
               </div>
             </div>        
