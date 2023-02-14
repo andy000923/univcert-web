@@ -21,7 +21,6 @@ const Login = () => {
     const [email, setemail] = useState();
     const [team_name, setteam_name] = useState();
     const [joinbutton, setjoinbutton] = useState(false);
-
     const regexEmail = new RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
     const regexTeam = new RegExp('^.{2,}$');
     
@@ -56,14 +55,12 @@ const Login = () => {
                     setmypage(true);
                 } else if (response.status === 400) {
                     alert("로그인 실패, API 키 발급을 위해 먼저 회원가입을 진행해 주세요.");
-                } else if (response.status === 500) {
-                    alert("Server error");
                 }
             },
             (error)=>{
                 console.log(error);              
                 if (error.code!=null) {
-                    alert("로그인 실패, API 키 발급을 위해 먼저 회원가입을 진행해 주세요.");
+                    alert("Server error. 잠시후에 다시 시도해주세요.");
                 }  
             });
         }
@@ -85,8 +82,7 @@ const Login = () => {
                     withCredentials: true // 쿠키 cors 통신 설정
                   })
                 .then(response=>{
-                    console.log(response);
-                    console.log(email, team_name);   
+                    console.log(response); 
                     if (response.data.code === 400) {
                         alert(response.data.message);
                     } else if (response.status === 200) {
