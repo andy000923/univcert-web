@@ -20,15 +20,22 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 1px;
-  margin-right: 40px;
+  margin-right: 0px;
   font-size: 1rem;
   font-weight: 500;
   line-height: 26px;
   display: flex;
 }
+@font-face {
+  font-family: 'MonoplexKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
 .api-container{
   display: flex;
   margin-left: 0px;
+  font-family: 'MonoplexKR-Regular';
 }
 .ap-is {
   margin-right: 10px;

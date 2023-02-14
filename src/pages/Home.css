@@ -9,7 +9,6 @@
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 36px;
-  font-family: SF Pro Display, Arial;
   font-size: .813rem;
   font-weight: 500;
   line-height: 18px;
@@ -60,7 +59,8 @@
   font-weight: 600;
 }
 .titletext{
-  font-size: 1.9rem;
+  font-size: 1.6rem;
+  font-family: 'MonoplexKR-Regular';
 }
 .plustext {
   font-size: 1rem;
@@ -72,9 +72,23 @@
   font-size: 1rem;
   line-height: 26px;
 }
+@font-face {
+  font-family: 'MonoplexKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
 .oneline{
   font-size: 1.1rem;
-  line-height: 2.1rem;
+  line-height: 2.0rem;
+  font-family: 'MonoplexKR-Regular';
+  font-weight: 1000;
+}
+.secondline{
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  font-family: 'MonoplexKR-Regular';
+  font-weight: 1000;
 }
 .frame-6-instance-1 {
   width: 100%;
@@ -92,7 +106,7 @@
   align-self: center;
   align-items: stretch;
   margin-bottom: 19px;
-  margin-right: 183px;
+  margin-right: 140px;
   display: flex;
 }
 
@@ -150,7 +164,6 @@
   justify-content: space-between;
   align-items: center;
   margin-left: 106px;
-  font-family: Kumar One, Arial;
   font-size: .188rem;
   line-height: 5px;
   display: flex;
@@ -368,9 +381,9 @@ pre code.hljs {
 code.hljs {
     padding: 3px 3px;
     margin-left: 40px;
+    line-height: 2.0rem;
 }
 .info-container{
-  font-family: 'ABeeZee';
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -382,7 +395,6 @@ code.hljs {
 }
 
 .hljs {
-  font-family: 'ABeeZee';
     background: #BBD8FC;
     color: #000000;
     background-color: transparent!important;
@@ -406,7 +418,6 @@ code.hljs {
   color: #FF8A1E;
 }
 code, kbd, pre, samp {
-  font-family: 'ABeeZee';
     font-size: 1rem;
 }
 .code-container {
@@ -416,14 +427,13 @@ border-radius: 5px;
 }
 
 .footer-container {
-  width: 100%;
+  margin: 0 auto;
+  width: 95%;
   text-align: center;
   }
 
 .group170{
   width : 100%;
-  max-width: 1500px;
-  min-width: 1000px;
   margin-bottom: -100px;
 }
 

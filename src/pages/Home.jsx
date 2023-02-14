@@ -116,10 +116,12 @@ const Home = () => {
         <div className="width-holder2">
           <div className="flex-container">
             <span className="email-validation-and">
-            <h1 className='titletext'>메일<small className='plustext'> </small>(<small className='plustext'> + </small>대학<small className='plustext'> </small>) 인증 API</h1>
+            <h1 className='titletext'>메일<small className='plustext'></small> (<small className='plustext'>+</small>대학<small className='plustext'></small>) 인증 API</h1>
             </span>
             <span className="improve-your-deliver">
-            <br/> <h1 className='oneline'> 단 <span className="hljs-pink">한 줄</span>의 코드로 .<br/> 사용자의 메일과 대학 재학 여부까지 인증해 보세요. </h1>
+            <br/>
+            <h1 className='oneline'> 단 <span className="hljs-pink">한 줄</span>의 코드로 .</h1>
+            <h2 className='secondline'>사용자의 메일과 대학 재학 여부까지 인증해 보세요.</h2>
             </span>
 
             {univcheck? 
@@ -164,21 +166,21 @@ const Home = () => {
                   {color?
                     <code className="language-json hljs">
                       <span className="hljs-punctuation">&#123; </span><br/>
-                          <span className="hljs-red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"status"</span> <span className="hljs-punctuation">:</span> <span className="hljs-number">{status}</span><span className="hljs-punctuation">,</span><br/>
-                          <span className="hljs-red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"domain"</span> <span className="hljs-punctuation">:</span> <span className="hljs-string">{domain}</span><span className="hljs-punctuation">,</span> <br/>
-                          <span className="hljs-red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"univ_email"</span> <span className="hljs-punctuation">:</span> <span className="hljs-keyword">{email1}</span><span className="hljs-punctuation">,</span><br/>
-                          <span className="hljs-red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"univ_name"</span> <span className="hljs-punctuation">:</span> <span className="hljs-keyword">{univName1}</span><span className="hljs-punctuation">,</span><br/>
-                          <span className="hljs-red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"success"</span> <span className="hljs-punctuation">:</span> <span className="hljs-purple">{success}</span><br/>
+                          <span className="hljs-red">&nbsp;&nbsp;"status"</span> <span className="hljs-punctuation">:</span> <span className="hljs-number">{status}</span><span className="hljs-punctuation">,</span><br/>
+                          <span className="hljs-red">&nbsp;&nbsp;"domain"</span> <span className="hljs-punctuation">:</span> <span className="hljs-string">{domain}</span><span className="hljs-punctuation">,</span> <br/>
+                          <span className="hljs-red">&nbsp;&nbsp;"univ_email"</span> <span className="hljs-punctuation">:</span> <span className="hljs-keyword">{email1}</span><span className="hljs-punctuation">,</span><br/>
+                          <span className="hljs-red">&nbsp;&nbsp;"univ_name"</span> <span className="hljs-punctuation">:</span> <span className="hljs-keyword">{univName1}</span><span className="hljs-punctuation">,</span><br/>
+                          <span className="hljs-red">&nbsp;&nbsp;"success"</span> <span className="hljs-punctuation">:</span> <span className="hljs-purple">{success}</span><br/>
                       <span className="hljs-punctuation">&#125; </span>
                     </code>
                     :
                     <code className="language-json hljs">
                       <span className="hljs-punctuation">&#123; </span><br/>
-                          <span className="hljs-green">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"status"</span> <span className="hljs-punctuation">:</span> <span className="hljs-number">{status}</span><span className="hljs-punctuation">,</span><br/>
-                          <span className="hljs-green">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"domain"</span> <span className="hljs-punctuation">:</span> <span className="hljs-string">{domain}</span><span className="hljs-punctuation">,</span> <br/>
-                          <span className="hljs-green">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"univ_email"</span> <span className="hljs-punctuation">:</span> <span className="hljs-keyword">{email1}</span><span className="hljs-punctuation">,</span><br/>
-                          <span className="hljs-green">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"univ_name"</span> <span className="hljs-punctuation">:</span> <span className="hljs-keyword">{univName1}</span><span className="hljs-punctuation">,</span><br/>
-                          <span className="hljs-green">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"success"</span> <span className="hljs-punctuation">:</span> <span className="hljs-purple">{success}</span><br/>
+                          <span className="hljs-green">&nbsp;&nbsp;"status"</span> <span className="hljs-punctuation">:</span> <span className="hljs-number">{status}</span><span className="hljs-punctuation">,</span><br/>
+                          <span className="hljs-green">&nbsp;&nbsp;"domain"</span> <span className="hljs-punctuation">:</span> <span className="hljs-string">{domain}</span><span className="hljs-punctuation">,</span> <br/>
+                          <span className="hljs-green">&nbsp;&nbsp;"univ_email"</span> <span className="hljs-punctuation">:</span> <span className="hljs-keyword">{email1}</span><span className="hljs-punctuation">,</span><br/>
+                          <span className="hljs-green">&nbsp;&nbsp;"univ_name"</span> <span className="hljs-punctuation">:</span> <span className="hljs-keyword">{univName1}</span><span className="hljs-punctuation">,</span><br/>
+                          <span className="hljs-green">&nbsp;&nbsp;"success"</span> <span className="hljs-punctuation">:</span> <span className="hljs-purple">{success}</span><br/>
                       <span className="hljs-punctuation">&#125; </span>
                     </code>
                   }
