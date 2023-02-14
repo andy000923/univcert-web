@@ -109,11 +109,12 @@
   justify-content: space-between;
   align-self: center;
   align-items: stretch;
-  margin-bottom: 19px;
   margin-right: 140px;
   display: flex;
 }
-
+.info-example{
+  margin-top: -20px;
+}
 .frame-7-instance-1 {
   width: 100%;
   flex-basis: 22%;
@@ -420,6 +421,12 @@ code.hljs {
 }
 .hljs-white{
   color: #fff;
+  font-family: 'GmarketSansMedium';
+}
+.hljs-info{
+  margin-left: 160px;
+  font-size: 0.7rem;
+  color: #7e7e7e;
   font-family: 'GmarketSansMedium';
 }
 .hljs-punctuation{

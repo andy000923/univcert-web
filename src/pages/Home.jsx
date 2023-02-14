@@ -185,6 +185,9 @@ const Home = () => {
                   }
                 </pre>
               </div>
+              <div className="info-example">
+                <span className="hljs-info">* 상단의 요청 및 응답은 예시입니다. 실제 API 사용은 APIs 페이지를 참고해주세요</span>
+              </div>
             </div>        
           </div>
         </div>
