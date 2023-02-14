@@ -109,9 +109,11 @@ const Home = () => {
   
   return (
     <div className="slide-169-1">
-      <Header/>
+      <div className="width-holder1">
+        <Header/>
+      </div>
       <div className="rectangle-1">
-        
+        <div className="width-holder2">
           <div className="flex-container">
             <span className="email-validation-and">
             <h1 className='titletext'>메일<small className='plustext'> </small>(<small className='plustext'> + </small>대학<small className='plustext'> </small>) 인증 API</h1>
@@ -185,13 +187,15 @@ const Home = () => {
               </div>
             </div>        
           </div>
-        
-      </div>
-      <div className='footer-container'>
-        <div className="flex-container-2">
-          <img className="group170" src={group170} />
         </div>
-        <ContactUsButton/>
+      </div>
+      <div className="width-holder1">
+        <div className='footer-container'>
+          <div className="flex-container-2">
+            <img className="group170" src={group170} />
+          </div>
+          <ContactUsButton/>
+        </div>
       </div>
     </div>
   );

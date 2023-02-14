@@ -2,7 +2,7 @@
 .slide-169-1 {
   margin: 0 auto;
   color: #000;
-  width: 1432px;
+  width: 100%;
   height: 100%;
   background-color: #fff;
   flex-direction: column;
@@ -25,6 +25,14 @@
   color: #262626;
   width:100%;
   background: linear-gradient(#f2f2f200 0%, #2e56891a 100%);
+}
+.width-holder1{
+  width:1432px;
+  margin: 0 auto;
+}
+.width-holder2{
+  margin: 0 auto;
+  width:1432px;
   flex-basis: 70%;
   justify-content: space-between;
   padding-top: 60px;
@@ -34,6 +42,7 @@
   display: flex;
   align-items: center;
 }
+
 .flex-container {
   flex-direction: column;
   flex-basis: 30%;
