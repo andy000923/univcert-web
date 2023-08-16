@@ -9,6 +9,7 @@
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 36px;
+  font-family: 'IBMPlexSansKR-Regular';
   font-size: .813rem;
   font-weight: 500;
   line-height: 18px;
@@ -238,42 +239,26 @@ border-radius: 4px;
   margin-bottom: 7px;
 }
 .univName-input{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   width:306px;
-  height: 39px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-
+  height: 41px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0px 0px 4px;
 }
 .email-input{
-display: flex;
-flex-direction: row;
-align-items: flex-start;
 width:306px;
-height: 39px;
-flex: none;
-order: 0;
-flex-grow: 0;
+height: 41px;
+border: 1px solid #ccc;
+border-radius: 4px 0px 0px 4px;
 }
 .test-button{
-display: flex;
-flex-direction: column;
 align-items: center;
 padding: 16px 0px;
 gap: 10px;
 width: 83px;
 height: 45px;
-
 background: #739BE7;
 border-radius: 0px 4px 4px 0px;
-
-
-flex: none;
-order: 1;
-flex-grow: 0;
+cursor: pointer;
 }
 
 .checkbox{
