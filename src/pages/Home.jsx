@@ -2,11 +2,19 @@ import React, {useState} from 'react';
 import {useEffect} from 'react';
 import axios from 'axios';
 import "./Home.css";
-import group170 from "../assets/Group170.svg";
 import checkbox from "../assets/checkbox.svg";
 import Header from "../components/Header";
 import ContactUsButton from '../components/ContactUsButton';
 import checkimg from "../assets/univcheck.svg";
+import icon1 from "../assets/FooterIcon1.png"
+import icon2 from "../assets/FooterIcon2.png"
+import icon3 from "../assets/FooterIcon3.png"
+import icon4 from "../assets/FooterIcon4.png"
+import icon5 from "../assets/FooterIcon5.png"
+import icon6 from "../assets/FooterIcon6.png"
+import icon7 from "../assets/FooterIcon7.png"
+import icon8 from "../assets/FooterIcon8.png"
+import footertext from "../assets/FooterText.png"
 const Home = () => {
   const baseUrl = 'https://univcert.com/api';
     const [color, setcolor] = useState(false);
@@ -129,7 +137,7 @@ const Home = () => {
             {univcheck? 
             <div className="univName-container">
               <input type="text" className="univName-input" required={true} value={univName} onChange={handleChange_univName} placeholder=" ex) 홍익대학교"/>
-              <button type="submit" className="test-button" onClick={handleCheckUniv}><img className='checkimg' alt='checkimg' src={checkimg}/></button>
+              <button type="submit" className="test-button" onClick={handleCheckUniv}><img className='<img alt="" className' alt='<img alt="" className' src={checkimg}/></button>
             </div> 
             :
             <div className="univName-container">
@@ -196,13 +204,50 @@ const Home = () => {
         </div>
       </div>
       <div className="width-holder1">
-        <div className='footer-container'>
-          <div className="flex-container-2">
-            <img className="group170" alt='descriptionImg' src={group170} />
+        <div className="flex-container-2">
+          <div className='flex-container-3'>
+            <div className='icontext'><img className='info-icon' alt="" src={icon1}/><p className="p-text">대학 도메인 기반<br/>확실한 인증 로직</p></div>
+            <div className='icontext'><img className='info-icon' alt="" src={icon2}/><p className="p-text">보안에<br/>최적화 된 API</p></div>
+            <div className='icontext'><img className='info-icon' alt="" src={icon3}/><p className="p-text">소속명에 따라<br/>메일 내용 변형</p></div>
+            <div className='icontext'><img className='info-icon' alt="" src={icon4}/><p className="p-text">인증에 필요한<br/>로직 불필요</p></div>
+            <div className='icontext'><img className='info-icon' alt="" src={icon5}/><p className="p-text">초보자도<br/>사용할 수 있는 API</p></div>
           </div>
-          <ContactUsButton/>
+          <div className='flex-container-3'>
+            <div className='icontext2'>
+              <img className='info-icon2' alt="" src={icon6}/>
+              <div>
+                <h3>시간과 자원 낭비를 줄입니다.</h3>
+                <p className="p-text">메일 전송에 필요한 로직과 인증코드를 기록하기</p>
+                <p className="p-text">위한 테이블, 학생증 인증에 필요한 이미지 저장 등</p>
+                <p className="p-text">일회성 기능에 많은 자원을 낭비하고 있습니다.</p>
+                <h4>불필요한 구현을 위임하고 개발 시간을 단축하세요.</h4>
+              </div>
+            </div>
+            <div className='icontext2'>
+              <img className='info-icon3' alt="" src={icon7}/>
+              <div>
+                <h3>준비되어있는 자바 라이브러리</h3>
+                <p className="p-text">인증을 위해 불가피한 Rest API 통신 과정을 </p>
+                <p className="p-text">개발경험이 없어도 쉽게 쓸 수 있도록 만들어 놓았습니다.</p>
+                <p className="p-text">자바를 사용하는 플랫폼이라면 해당 라이브러리로 </p>
+                <h4>모든 과정을 최대 두 줄로 끝내보세요.</h4>
+              </div>
+            </div>
+            <div className='icontext2'>
+              <img className='info-icon4' alt="" src={icon8}/>
+              <div>
+                <h3>대학재학 여부는 불필요하다면?</h3>
+                <p className="p-text">메일인증 로직 구현에 신경 쓰고 싶지 않은 분이시라면.</p>
+                <p className="p-text">univ_check 컬럼을 false로 요청시 메일 소유 여부만</p>
+                <p className="p-text">체크 할 수 있습니다.</p>
+                <h4>상황에 맞게 효율적으로 사용해 보세요.</h4>
+              </div>
+            </div> 
+          </div>
+          <img className='footer-icon' alt="" src={footertext}/>
         </div>
       </div>
+      <ContactUsButton/>
     </div>
   );
 };
