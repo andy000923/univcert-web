@@ -261,23 +261,24 @@ cursor: pointer;
   left: 332px;
   top: 591px;
   margin-top: 10px;
-  
 }
 .checkbox-container:hover .checkbox-content {
   display: block;
 }
 .checkbox-content {
-  font-size: 0.75rem;
+  font-size: 10pt;
   line-height: 1.3;
-  display: none;
   position: absolute;
   margin-top: 0px;
   margin-left: 9px;
   background-color: #f9f9f9;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  border-radius: 0% 30% 30% 30%;
-  width : 150px;
-  height: 55px;
+  border-radius: 0px 30px 30px 30px;
+  width : 165px;
+  height: 60px;
+  font-family: 'NanumSquare';
+  font-size: 10pt;
+  font-weight: 600;
 }
 .check-text{
   margin-left: -17px;
