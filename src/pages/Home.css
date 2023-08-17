@@ -33,12 +33,10 @@
   margin: 0 auto;
 }
 .width-holder2{
-  margin: 0 auto;
+  margin: 20px auto 70px;
   width:1432px;
   flex-basis: 70%;
   justify-content: space-between;
-  padding-top: 60px;
-  padding-bottom: 70px;
   font-size: 2rem;
   line-height: 1.5rem;
   display: flex;
@@ -221,15 +219,17 @@ border-radius: 4px;
   font-family: 'NanumSquare';
   font-size: 10pt;
   font-weight: 600;
+  padding-left: 10px;
 }
 .email-input{
-width:306px;
-height: 41px;
-border: 1px solid #ccc;
-border-radius: 4px 0px 0px 4px;
-font-family: 'NanumSquare';
-font-size: 10pt;
-font-weight: 600;
+  width:306px;
+  height: 41px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0px 0px 4px;
+  font-family: 'NanumSquare';
+  font-size: 10pt;
+  font-weight: 600;
+  padding-left: 10px;
 }
 .test-button{
 align-items: center;
@@ -241,7 +241,9 @@ background: #739BE7;
 border-radius: 0px 4px 4px 0px;
 cursor: pointer;
 }
-
+.check{
+  margin-top: -7px;
+}
 .checkbox{
   width: 140px;
   height: 25px;
@@ -419,6 +421,7 @@ border-radius: 5px;
   display: flex;
   justify-content: space-between;
   min-height: 100px;
+  margin: 7px 0px;
 }
 
 .icontext{
@@ -472,9 +475,6 @@ h3{
 .footer-icon{
   margin-top: 40px;
   width: 300px;
-}
-.checkimg{
-  margin-top:-6px;
 }
 @font-face {
   font-family: 'IBMPlexSansKR-Regular';

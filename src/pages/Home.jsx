@@ -137,7 +137,7 @@ const Home = () => {
             {univcheck? 
             <div className="univName-container">
               <input type="text" className="univName-input" required={true} value={univName} onChange={handleChange_univName} placeholder=" ex) 홍익대학교"/>
-              <button type="submit" className="test-button" onClick={handleCheckUniv}><img className='<img alt="" className' alt='<img alt="" className' src={checkimg}/></button>
+              <button type="submit" className="test-button" onClick={handleCheckUniv}><img className='check' alt='check' src={checkimg}/></button>
             </div> 
             :
             <div className="univName-container">
