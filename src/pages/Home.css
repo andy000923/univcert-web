@@ -73,18 +73,6 @@
   font-size: 1rem;
   line-height: 26px;
 }
-@font-face {
-  font-family: 'IBMPlexSansKR-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 .oneline{
   font-size: 1.3rem;
   line-height: 2.0rem;
@@ -243,12 +231,18 @@ border-radius: 4px;
   height: 41px;
   border: 1px solid #ccc;
   border-radius: 4px 0px 0px 4px;
+  font-family: 'NanumSquare';
+  font-size: 10pt;
+  font-weight: 600;
 }
 .email-input{
 width:306px;
 height: 41px;
 border: 1px solid #ccc;
 border-radius: 4px 0px 0px 4px;
+font-family: 'NanumSquare';
+font-size: 10pt;
+font-weight: 600;
 }
 .test-button{
 align-items: center;
@@ -440,3 +434,16 @@ border-radius: 5px;
 .checkimg{
   margin-top:-6px;
 }
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');

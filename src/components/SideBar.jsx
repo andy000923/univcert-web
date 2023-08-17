@@ -32,15 +32,15 @@ const SideBar = (props) => {
 
   return (
     <div className="frame1-container">
-        <img className="Frame0" src={Frame1} onClick={goTo1}/>
-        <img className="reference1" src={reference} />
-        <img className="Frame1" src={Frame2} onClick={goTo2}/>
-        <img className="Frame1" src={Frame3} onClick={goTo3}/>
-        <img className="Frame1" src={Frame4} onClick={goTo4}/>
-        <img className="Frame1" src={Frame5} onClick={goTo5}/>
-        <img className="Frame1" src={Frame7} onClick={goTo7}/>
-        <a href="https://incredible-raincoat-c52.notion.site/cdb55dd7ea5b475eaaf94ce76fa9eba4" target="_blank">
-          <img className="Frame1" src={Frame6} />
+        <img className="Frame0" alt="infotextimg" src={Frame1} onClick={goTo1}/>
+        <img className="reference1" alt="infotextimg" src={reference} />
+        <img className="Frame1" alt="infotextimg" src={Frame2} onClick={goTo2}/>
+        <img className="Frame1" alt="infotextimg" src={Frame3} onClick={goTo3}/>
+        <img className="Frame1" alt="infotextimg" src={Frame4} onClick={goTo4}/>
+        <img className="Frame1" alt="infotextimg" src={Frame5} onClick={goTo5}/>
+        <img className="Frame1" alt="infotextimg" src={Frame7} onClick={goTo7}/>
+        <a href="https://incredible-raincoat-c52.notion.site/cdb55dd7ea5b475eaaf94ce76fa9eba4">
+          <img className="Frame1" alt="infotextimg" src={Frame6} />
         </a>
     </div>
   );
