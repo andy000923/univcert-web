@@ -26,20 +26,16 @@
   line-height: 26px;
   display: flex;
 }
-@font-face {
-  font-family: 'MonoplexKR-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
 .api-container{
   display: flex;
   margin-left: 0px;
-  font-family: 'MonoplexKR-Regular';
 }
 .ap-is {
   margin-right: 10px;
   cursor: pointer;
+  font-family: 'NanumSquare';
+  font-size: 11pt;
+  font-weight: 600;
 }
 
 .expand-more-1 {
@@ -61,6 +57,9 @@
   margin-bottom: 2px;
   padding: 10px;
   display: flex;
+  font-family: 'NanumSquare';
+  font-size: 10pt;
+  font-weight: 600;
 }
 .api-button{
   cursor : pointer;
@@ -80,3 +79,4 @@
 .api-container:hover .dropdown-content {
   display: block;
 }
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');

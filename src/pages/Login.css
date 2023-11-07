@@ -1,4 +1,5 @@
 .home-main{
+    font-family: 'IBMPlexSansKR-Regular';
     display: inline-flex;
     width: 100%;
 }
@@ -25,8 +26,8 @@
     display:flex;
     flex-direction: column;
     width: 100%;
+    height: 98vh;
     background-color:whitesmoke;
-    height: 100vh;
     min-height: 730px;
 }
 .SignUpOrLogin_modal__VDGVH {
@@ -80,6 +81,7 @@
 }
 .InputPanel_wrapper__RXp1k .InputPanel_email__aEAmZ {
     padding-bottom: 14px;
+    
 }
 .style_wrapper__6RiUK {
     position: relative;
@@ -110,6 +112,9 @@
     box-shadow: none;
     outline: none;
     resize: none;
+    font-family: 'NanumSquare';
+    font-size: 10pt;
+    font-weight: 500;
 }
 .style_guidance__FT8Qs {
     color: #767676;
@@ -129,10 +134,11 @@
     border: 0;
     border-radius: 6px;
     background-color: #739BE7;
-    font-size: 16px;
+    font-size: 11pt;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
+    font-family: 'GmarketSansMedium';
 }
 button {
     margin: 0;
@@ -246,7 +252,7 @@ button {
 .style_wrapper__MbwMv {
     margin-top: -2px;
     text-align: center;
-    font-size: 10px;
+    font-size: 8pt;
     line-height: 18px;
     color: #999;
 }
@@ -288,3 +294,19 @@ button {
 .join-complete{
     text-align: center;
 }
+h1{
+    font-family: 'IBMPlexSansKR-Regular';
+}
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
