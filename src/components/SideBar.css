@@ -1,21 +1,21 @@
 .frame1-container{
-    width: 144px;
-    min-width: 100px;
+    width: 184px;
     position: relative;
+    padding: 10px 5px;
 }
-.Frame0{
+.lists{
     cursor : pointer;
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: -5px;
+    margin: 5px 0px 5px -10px;
+    color: #a0a0a0;
+    font-size: 11pt;
 }
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 링크 색상을 부모 요소에서 상속 */
+  }
 .Frame1{
     cursor : pointer;
     width: 100%;
-    margin-top: -3px;
-}
-.reference1{
-    margin-left: 5%;
-    margin-bottom: 2px;
-    width: 30%;
+    text-decoration: none;
 }

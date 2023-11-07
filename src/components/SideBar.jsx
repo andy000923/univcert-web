@@ -1,13 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import "./SideBar.css";
-import reference from "../assets/REFERENCE.svg";
-import Frame1 from "../assets/Frame1off.svg";
-import Frame2 from "../assets/Frame2.svg";
-import Frame3 from "../assets/Frame3.svg";
-import Frame4 from "../assets/Frame4.svg";
-import Frame5 from "../assets/Frame5.svg";
-import Frame6 from "../assets/Frame6.svg";
-import Frame7 from "../assets/Frame7.svg";
 const SideBar = (props) => {
   const navigate = useNavigate();
 
@@ -30,19 +22,28 @@ const SideBar = (props) => {
     navigate("/instruction5");
   }
 
+  // 스타일 변경 함수를 React 스타일로 수정
+  const changeColor = (element) => {
+    element.style.color = "#80B6F5";
+  }
+
+  const restoreColor = (element) => {
+    element.style.color = ""; // 이전 색상으로 돌아가게 하려면 빈 문자열을 할당
+  }
+
   return (
     <div className="frame1-container">
-        <img className="Frame0" src={Frame1} onClick={goTo1}/>
-        <img className="reference1" src={reference} />
-        <img className="Frame1" src={Frame2} onClick={goTo2}/>
-        <img className="Frame1" src={Frame3} onClick={goTo3}/>
-        <img className="Frame1" src={Frame4} onClick={goTo4}/>
-        <img className="Frame1" src={Frame5} onClick={goTo5}/>
-        <img className="Frame1" src={Frame7} onClick={goTo7}/>
-        <a href="https://incredible-raincoat-c52.notion.site/cdb55dd7ea5b475eaaf94ce76fa9eba4" target="_blank">
-          <img className="Frame1" src={Frame6} />
-        </a>
+      <p className="lists" onClick={goTo1} onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>빠른 시작</p>
+      <p className="lists" onClick={goTo2} onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>이용자 메일 인증 시작</p>
+      <p className="lists" onClick={goTo3} onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>발송된 인증 코드 입력</p>
+      <p className="lists" onClick={goTo4} onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>인증된 이메일인지 확인</p>
+      <p className="lists" onClick={goTo5} onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>인증된 유저리스트 출력</p>
+      <p className="lists" onClick={goTo7} onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>대학명 체크</p>
+      <a href="https://incredible-raincoat-c52.notion.site/cdb55dd7ea5b475eaaf94ce76fa9eba4">
+        <p className="lists" onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>인증가능 대학 명단</p>
+      </a>
     </div>
   );
 };
+
 export default SideBar;
