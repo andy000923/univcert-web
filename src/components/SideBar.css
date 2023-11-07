@@ -1,12 +1,12 @@
 .frame1-container{
-    width: 184px;
+    width: 176px;
     position: relative;
     padding: 10px 5px;
 }
 .lists{
     cursor : pointer;
     width: 100%;
-    margin: 5px 0px 5px -10px;
+    margin-left: -10px;
     color: #a0a0a0;
     font-size: 11pt;
 }
