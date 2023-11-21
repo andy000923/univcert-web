@@ -1,72 +1,88 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Fmain from "../assets/main.svg";
-import Fexport from "../assets/export.svg";
-import Frame1off from "../assets/Frame1off.svg";
-import Frame2 from "../assets/Frame2.svg";
-import Frame3 from "../assets/Frame3.svg";
-import Frame4 from "../assets/Frame4.svg";
-import Frame5 from "../assets/Frame5.svg";
-import Frame6 from "../assets/Frame6.svg";
-import Frame7 from "../assets/Frame7.svg";
-import Frame8 from "../assets/Frame8.svg";
-import Frame1 from "../assets/Frame1.svg";
-import Frame2on from "../assets/Frame2on.svg";
-import Frame3on from "../assets/Frame3on.svg";
-import Frame4on from "../assets/Frame4on.svg";
-import Frame5on from "../assets/Frame5on.svg";
-import Frame7on from "../assets/Frame7on.svg";
-import Frame8on from "../assets/Frame8on.svg";
+import './InfoBar.css';
 
 const InfoBar = () => {
-    const location = useLocation()
+    const location = useLocation();
     const [activeItem, setActiveItem] = useState(null);
-    useEffect(() => {
-        const pathToIndexMap = {
-            "/instruction": 1,
-            "/instruction1": 2,
-            "/instruction2": 3,
-            "/instruction3": 4,
-            "/instruction4": 5,
-            "/instruction5": 7,
-            "/instruction6": 8,
-        };
 
-        const activeIndex = pathToIndexMap[location.pathname];
-        setActiveItem(activeIndex);
-    }, [location.pathname]);
-    const isActive = (index) => {
-        return activeItem === index ? "clicked" : "";
+    const setActiveItemHandler = (index) => {
+        setActiveItem(index);
     };
 
+    useEffect(() => {
+        const paths = {
+            "/instruction": 0,
+            "/instruction1": 1,
+            "/instruction2": 2,
+            "/instruction3": 3,
+            "/instruction4": 4,
+            "/instruction5": 5,
+            "/instruction6": 6,
+        };
+
+        const index = paths[location.pathname];
+
+        if (index !== undefined) {
+            setActiveItemHandler(index);
+        }
+    }, [location.pathname]);
+
     return (
-        <div className="frame-container">
-            <Link to="/instruction" style={{ textDecoration: "none", color: "black" }}>
-                <img alt="" className={`Frame ${isActive(1)}`} src={activeItem === 1 ? Frame1 : Frame1off} />
-            </Link>
-            <img alt="" className="Fmain" src={Fmain} />
-            <Link to="/instruction1" style={{ textDecoration: "none", color: "black" }}>
-                <img alt="" className={`Frame ${isActive(2)}`} src={activeItem === 2 ? Frame2on : Frame2} />
-            </Link>
-            <Link to="/instruction2" style={{ textDecoration: "none", color: "black" }}>
-                <img alt="" className={`Frame ${isActive(3)}`} src={activeItem === 3 ? Frame3on : Frame3} />
-            </Link>
-            <img alt="" className="Fexport" src={Fexport} />
-            <Link to="/instruction3" style={{ textDecoration: "none", color: "black" }}>
-                <img alt="" className={`Frame ${isActive(4)}`} src={activeItem === 4 ? Frame4on : Frame4} />
-            </Link>
-            <Link to="/instruction4" style={{ textDecoration: "none", color: "black" }}>
-                <img alt="" className={`Frame ${isActive(5)}`} src={activeItem === 5 ? Frame5on : Frame5} />
-            </Link>
-            <Link to="/instruction5" style={{ textDecoration: "none", color: "black" }}>
-                <img alt="" className={`Frame ${isActive(7)}`} src={activeItem === 7 ? Frame7on : Frame7} />
-            </Link>
-            <Link to="/instruction6" style={{ textDecoration: "none", color: "black" }}>
-                <img alt="" className={`Frame ${isActive(8)}`} src={activeItem === 8 ? Frame8on : Frame8} />
-            </Link>
-            <a href="https://incredible-raincoat-c52.notion.site/cdb55dd7ea5b475eaaf94ce76fa9eba4">
-                <img alt="" className={`Frame ${isActive(6)}`} src={Frame6} />
-            </a>
+        <div>
+            <div className='MainLeftBar'>
+                <ul>
+                    <Link to='/instruction'>
+                        <ul className={`div3 ${activeItem === 0 && 'clicked3'}`} onClick={() => setActiveItemHandler(0)}>
+                            빠른 시작
+                        </ul>
+                    </Link>
+                    <ul id='logo'>
+                        <h4>주요</h4>
+                    </ul>
+                    <Link to='/instruction1'>
+                        <ul className={`div3 ${activeItem === 1 && 'clicked3'}`} onClick={() => setActiveItemHandler(1)}>
+                            이용자 메일 인증 시작
+                        </ul>
+                    </Link>
+                    <Link to='/instruction2'>
+                        <ul className={`div3 ${activeItem === 2 && 'clicked3'}`} onClick={() => setActiveItemHandler(2)}>
+                            발송된 인증 코드 입력
+                        </ul>
+                    </Link>
+                    <ul id='logo'>
+                        <h4>이외 기능</h4>
+                    </ul>
+                    <Link to='/instruction3'>
+                        <ul className={`div3 ${activeItem === 3 && 'clicked3'}`} onClick={() => setActiveItemHandler(3)}>
+                            인증된 이메일인지 확인
+                        </ul>
+                    </Link>
+                    <Link to='/instruction4'>
+                        <ul className={`div3 ${activeItem === 4 && 'clicked3'}`} onClick={() => setActiveItemHandler(4)}>
+                            인증된 유저리스트 출력
+                        </ul>
+                    </Link>
+                    <Link to='/instruction5'>
+                        <ul className={`div3 ${activeItem === 5 && 'clicked3'}`} onClick={() => setActiveItemHandler(5)}>
+                            대학명 체크
+                        </ul>
+                    </Link>
+                    <Link to='/instruction6'>
+                        <ul className={`div3 ${activeItem === 6 && 'clicked3'}`} onClick={() => setActiveItemHandler(6)}>
+                            인증된 유저 목록 초기화
+                        </ul>
+                    </Link>
+                    <Link to='/instruction7'>
+                        <ul className={`div3 ${activeItem === 7 && 'clicked3'}`} onClick={() => setActiveItemHandler(7)}>
+                            인증된 특정 유저 초기화
+                        </ul>
+                    </Link>
+                    <a href="https://incredible-raincoat-c52.notion.site/cdb55dd7ea5b475eaaf94ce76fa9eba4">
+                        <ul className="div3">인증 가능 대학 명단</ul>
+                    </a>
+                </ul>
+            </div>
         </div>
     );
 };
