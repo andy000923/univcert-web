@@ -24,11 +24,12 @@ const SideBar = (props) => {
 
   // 스타일 변경 함수를 React 스타일로 수정
   const changeColor = (element) => {
-    element.style.color = "#80B6F5";
+    element.style.color = "#5287C6";
   }
 
   const restoreColor = (element) => {
-    element.style.color = ""; // 이전 색상으로 돌아가게 하려면 빈 문자열을 할당
+    element.style.color = "";
+     // 이전 색상으로 돌아가게 하려면 빈 문자열을 할당
   }
 
   return (
