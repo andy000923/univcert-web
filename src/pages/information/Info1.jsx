@@ -1,7 +1,7 @@
 import "./Info.css"
 import Header from "../../components/Header";
 import ContactUsButton from '../../components/ContactUsButton';
-import InfoBar from "../../components/InfoBar";
+import InfoSideBar from "../../components/InfoSideBar";
 import f1_1 from "../../assets/f1_1.png";
 import f1_2 from "../../assets/f1_2.png";
 const Info1 = () => {
@@ -11,7 +11,7 @@ const Info1 = () => {
 
       <div className="container">
   
-        <InfoBar/>
+        <InfoSideBar/>
         <div className="img-container">
             <img className="FrameImg" alt="" src={f1_1} />
             <div className="gradle-container">

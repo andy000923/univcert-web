@@ -1,5 +1,5 @@
 import "./Info.css"
-import InfoBar from "../../components/InfoBar";
+import InfoSideBar from "../../components/InfoSideBar";
 import Header from "../../components/Header";
 import ContactUsButton from '../../components/ContactUsButton';
 import f9 from "../../assets/f9.png";
@@ -9,7 +9,7 @@ return (
     <Header/>
 
     <div className="container">
-    <InfoBar/>
+    <InfoSideBar/>
         <div className="img-container">
             <img className="FrameImg" alt="" src={f9} />
         </div>
