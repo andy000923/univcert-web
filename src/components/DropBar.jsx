@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import "./SideBar.css";
-const SideBar = (props) => {
+import "./DropBar.css";
+const DropBar = (props) => {
   const navigate = useNavigate();
 
   const goTo1 = () => {
@@ -47,4 +47,4 @@ const SideBar = (props) => {
   );
 };
 
-export default SideBar;
+export default DropBar;

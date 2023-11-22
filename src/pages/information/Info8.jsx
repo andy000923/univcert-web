@@ -1,5 +1,5 @@
 import "./Info.css"
-import InfoBar from "../../components/InfoBar";
+import InfoSideBar from "../../components/InfoSideBar";
 import Header from "../../components/Header";
 import ContactUsButton from '../../components/ContactUsButton';
 import f8 from "../../assets/f8.png";
@@ -9,7 +9,7 @@ return (
     <Header/>
 
     <div className="container">
-    <InfoBar/>
+    <InfoSideBar/>
         <div className="img-container">
             <img className="FrameImg" alt="" src={f8} />
         </div>

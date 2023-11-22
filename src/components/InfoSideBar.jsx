@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import './InfoBar.css';
+import './InfoSideBar.css';
 
-const InfoBar = () => {
+const InfoSideBar = () => {
     const location = useLocation();
     const [activeItem, setActiveItem] = useState(null);
 
@@ -19,6 +19,7 @@ const InfoBar = () => {
             "/instruction4": 4,
             "/instruction5": 5,
             "/instruction6": 6,
+            "/instruction7": 7
         };
 
         const index = paths[location.pathname];
@@ -87,4 +88,4 @@ const InfoBar = () => {
     );
 };
 
-export default InfoBar;
+export default InfoSideBar;
