@@ -1,6 +1,6 @@
 .slide1{
     width:1432px;
-    margin-left: 250px;
+    margin-left: 280px;
 }
 .container{
     width: 90%;
@@ -13,8 +13,8 @@
     min-width: 900px;
 }
 .FrameImg{
-    width: 90%;
-    margin-left: 70px;
+    width: 96%;
+    margin-left: 30px;
 }
 
 .frame-container{
@@ -49,8 +49,8 @@
     padding: 16px;
     margin-top: 3px;
     margin-bottom: 10px;
-    margin-left: 117px;
-    margin-right: 106px;
+    margin-left: 81px;
+    margin-right: 71px;
     background: #EBEFF4;
     border-radius: 10px;
 }
