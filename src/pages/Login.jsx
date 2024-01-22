@@ -1,10 +1,9 @@
 import React, {useState} from "react";
-import { useNavigate, Link } from "react-router-dom";
-import loginlogo from "../assets/loginlogo.png"
+import { useNavigate } from "react-router-dom";
+import loginlogo from "../assets/advertisement-image.svg"
 import univcertlogo from "../assets/UNIVCERT.svg"
 import logoimg from "../assets/logoimg.svg"
 import ContactUsButton from "../components/ContactUsButton"
-import createaccountbutton from "../assets/CreateAccountButton.svg"
 import axios from "axios";
 import "./Login.css"
 
@@ -105,17 +104,18 @@ const Login = () => {
         
     
   return (
-    <div className="home-main">              
+    <div className="home-main"> 
+        <div className="login-header">
+            <img className="logoimg" alt="logo" src={logoimg} onClick={goToHome}/>
+            <img className="univcertlogo" alt="logo" src={univcertlogo} onClick={goToHome}/>
+        </div> 
+        <div className="advertisement-main">
+            <img className="advertisement-image" alt="이미지" src={loginlogo}/>
+        </div>            
         <div className="signup-main">
-            <div className="login-header">
-                <Link to="/" style={{ textDecoration: "none" , color:"black"}}><img className="logoimg" alt="logo" src={logoimg}/></Link>
-                <img className="univcertlogo" alt="logo" src={univcertlogo} onClick={goToHome}/>
-            </div>
-            <div className="body-outer" >  
-
+            <div className="body-outer" >
             {mypage?
-
-            <div id="MODAL_BODY" class="ModalBody Body_body__KI0OY SignUpOrLogin_modal__VDGVH">
+                <div id="MODAL_BODY" class="ModalBody Body_body__KI0OY SignUpOrLogin_modal__VDGVH">
                     <div class="TextPanel_className__J3J2W">
                         <h1>API 키 확인을 위한 마이페이지</h1>
                     </div>
@@ -169,7 +169,7 @@ const Login = () => {
                             </div>
                         </div>
                         <div class="InputPanel_buttons__w391m">
-                            <button type="button" class="style_wrapper__IgK7U email-login-button"
+                            <button type="button" class="login-button"
                             onClick={handleSubmit}>
                                 로그인
                             </button>
@@ -181,7 +181,9 @@ const Login = () => {
                                 { joinbutton ?
                                 <p className="join-complete">"가입이 완료되었습니다.<br/>로그인 버튼을 눌러주세요."</p>
                                 :
-                                <img className="create-button" alt="API 키 만들기" src={createaccountbutton} onClick={handleJoin}/>
+                                <button className="create-button" onClick={handleJoin}>
+                                    회원가입 후 API 키 자동 발급
+                                </button>
                                 }
                             </div>
                         </div>
@@ -193,12 +195,7 @@ const Login = () => {
 
             </div>
         </div>
-        <div className="advertisement-main">
-            <img className="loginlogo" alt="로그인" src={loginlogo}/>
-            <div className="button-container">
-                <ContactUsButton/>
-            </div>
-        </div>
+        <ContactUsButton/>         
     </div>
   );
 }
