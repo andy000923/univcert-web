@@ -54,7 +54,7 @@
 }
 .body-outer{
     min-width: 500px;
-    width: 60%;
+    width: 40%;
 }
 .Body_body__KI0OY {
     margin: 0 auto;
@@ -72,6 +72,7 @@
     font-size: 20pt;
     font-weight: 600;
     color: #045fc7;
+    margin-top: -5px;
 }
 .InputPanel_wrapper__RXp1k {
     position: relative;
@@ -201,6 +202,7 @@
     text-align: center;
     color: #999;
     font-size: 8pt;
+    margin-bottom: 15px;
 }
 .InputPanel_socialWrapper__Dhaxo.isKR {
     width: 100%;
@@ -288,7 +290,7 @@ button {
     text-align: center;
     font-size: 8pt;
     color: #999;
-    margin-top: -30px;
+    margin-top: -10px;
 }
 
 @media (max-width: 800px) {
