@@ -115,7 +115,7 @@ const Login = () => {
         <div className="signup-main">
             <div className="body-outer" >
             {mypage?
-                <div id="MODAL_BODY" class="ModalBody Body_body__KI0OY SignUpOrLogin_modal__VDGVH">
+                <div class="ModalBody Body_body__KI0OY SignUpOrLogin_modal__VDGVH">
                     <div class="TextPanel_className__J3J2W">
                         <h1>API 키 확인을 위한 마이페이지</h1>
                     </div>
@@ -150,19 +150,19 @@ const Login = () => {
 
                 :
 
-                <div id="MODAL_BODY" class="ModalBody Body_body__KI0OY SignUpOrLogin_modal__VDGVH">
+                <div class="Body_body__KI0OY">
                     <div class="TextPanel_className__J3J2W">
                         <h1>API 키 확인을 위한 로그인</h1>
                     </div>
-                    <div class="InputPanel_wrapper__RXp1k">
+                    <div class="InputPanel">
                         <input class="InputPanel_password__my_BO" type="password" autocomplete="password"></input>
-                        <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
+                        <div class="InputPanel">
                             <label for="email" class="style_label__BKYHB">도메인 명 (소속명) </label>
                             <div class="style_body__A6XnO">
                                 <input type="text" onChange={handleChange_team_name} placeholder="예) univcert.com &nbsp; or &nbsp; 우아한형제들" id="email" value={team_name} autofocus></input>
                             </div>
                         </div>
-                        <div class="style_wrapper__6RiUK InputPanel_email__aEAmZ">
+                        <div class="InputPanel">
                             <label for="email" class="style_label__BKYHB">개발자 이메일 </label>
                             <div class="style_body__A6XnO">
                                 <input type="email" onChange={handleChange_email} placeholder="예) abc@gmail.com" id="email" value={email} minLength="4"></input>
