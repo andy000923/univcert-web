@@ -1,6 +1,12 @@
+.slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 258px;
+}
 .slide1{
     width:1432px;
-    margin-left: 280px;
+    min-width: 1432px;
 }
 .container{
     width: 90%;
@@ -9,8 +15,9 @@
 }
 
 .img-container{
-    width: 100%;
-    min-width: 900px;
+    margin-left: 5%;
+    width: 90%;
+    min-width: 1000px;
 }
 .FrameImg{
     width: 96%;
@@ -45,27 +52,74 @@
 }
 .gradle-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 16px;
-    margin-top: 3px;
-    margin-bottom: 10px;
-    margin-left: 81px;
-    margin-right: 71px;
+    margin: 10px 0;
     background: #EBEFF4;
     border-radius: 10px;
 }
-.code-container1{
-    font-size: 0.8rem;
+.title-container{
+    letter-spacing: 3px;
+    font-size: 1.2rem;
     line-height: 1rem;
     margin-left: 10px;
     font-family: 'GmarketSansMedium';
 }
+.code-container1{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    margin-left: 10px;
+    font-family: 'GmarketSansMedium';
+}
+.blue-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.blue-box {
+    background-color: #BBD8FC;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-family: 'GmarketSansMedium';
+    justify-content: center;
+}
+.red-box {
+    background-color: #FFC6C6;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-family: 'GmarketSansMedium';
+    justify-content: center;
+}
 .hljs-red{
     color: #D30000;
 }
-@font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
+h1{
+    color: #5287C6;
+    font-family: 'IBMPlexSansKR-Regular';
+}
+h3{
+    margin-top: 40px;
+    color: #000000;
+    font-family: 'IBMPlexSansKR-Regular';
+}
+@media (max-width: 1600px) {
+    .slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+        min-width: 1300px;
+    }
+}

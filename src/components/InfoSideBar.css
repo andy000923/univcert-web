@@ -11,7 +11,7 @@ a {
     position: fixed;
     top: 0px;
     left: 0px;
-    height: 1000px;
+    height: 100vh;
     background: #ffffff;
     overflow: hidden;
     z-index: 1;
@@ -50,6 +50,8 @@ a {
     color: #ffffff;
     border-bottom: 4px solid #9bc0ec;
   }
-  
-  @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
-  
+  @media (max-width: 1600px) {
+    .MainLeftBar {
+      display: none;
+    }
+  }
