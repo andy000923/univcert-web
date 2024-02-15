@@ -5,10 +5,10 @@ import InfoSideBar from "../../components/InfoSideBar";
 const Info1 = () => {
   return (
     <div className="slide">
+      <InfoSideBar/>
       <div className="slide1">
         <Header/>
-        <div className="container">
-          <InfoSideBar/>
+        <div className="container">  
           <div className="img-container">
               <h1>바로 시작하기</h1>
               <h3>🧑‍💻 자바 사용자 간편 라이브러리 등록</h3>
@@ -20,19 +20,19 @@ const Info1 = () => {
               <div className="gradle-container">
                 <code className="code-container1">
                     <span>repositories&#123;</span><br/>
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maven&#123;url 'https://jitpack.io'&#125;</span><br/>
+                    <span>&emsp;&emsp;&emsp;...</span><br/>
+                    <span>&emsp;&emsp;&emsp;maven&#123;url 'https://jitpack.io'&#125;</span><br/>
                     <span>&#125;</span><br/><br/>
                     <span>dependencies&#123;</span><br/>
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;implementation <span class="hljs-red">'com.github.in-seo:univcert:master-SNAPSHOT'</span></span><br/>
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br/>
+                    <span>&emsp;&emsp;&emsp;...</span><br/>
+                    <span>&emsp;&emsp;&emsp;implementation <span class="hljs-red">'com.github.in-seo:univcert:master-SNAPSHOT'</span></span><br/>
+                    <span>&emsp;&emsp;&emsp;...</span><br/>
                     <span>&#125; </span>
                 </code>
               </div>
               <div className="blue-container">
                 <div className="blue-box">
-                  <span>Request</span><br/>
+                  <span className="hljs-pink">Request 속성</span><br/>
                   <span>Key: 부여받은 API_Key</span><br/>
                   <span>univName : 대학교명</span><br/>
                   <span>email : 이용자 이메일</span><br/>
@@ -41,7 +41,7 @@ const Info1 = () => {
                   <span>code : 전송된 인증번호 (4자리)</span>
                 </div>
                 <div className="blue-box">
-                  <span>Response</span><br/>
+                  <span className="hljs-pink">Response 속성</span><br/>
                   <span>success : API 통신 성공 여부</span><br/>
                   <span>message : success가 false 시에 전달되는 오류 메시지</span><br/>
                   <span>certified_email : 인증된 이메일</span><br/>
@@ -56,11 +56,11 @@ const Info1 = () => {
               <div className="gradle-container">
                 <code className="code-container1">
                   <span>&#123;</span><br/>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;“key” : “부여받은 API KEY”,</span><br/>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;"email” : “abc@mail.hongik.ac.kr”,</span><br/>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;“univName” : “홍익대학교”,</span><br/>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;“univ_check” : true</span><br/>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(true라면 해당 대학 재학 여부, false라면 메일 소유자 인증만)</span><br/>
+                  <span>&emsp;&emsp;“key” : “부여받은 API KEY”,</span><br/>
+                  <span>&emsp;&emsp;"email” : “abc@mail.hongik.ac.kr”,</span><br/>
+                  <span>&emsp;&emsp;“univName” : “홍익대학교”,</span><br/>
+                  <span>&emsp;&emsp;“univ_check” : true</span><br/>
+                  <span>&emsp;&emsp;&emsp;&emsp;&emsp;(true라면 해당 대학 재학 여부, false라면 메일 소유자 인증만)</span><br/>
                   <span>&#125; </span>
                 </code>
               </div>
@@ -72,10 +72,10 @@ const Info1 = () => {
               <div className="gradle-container">
                 <code className="code-container1">
                   <span>&#123;</span><br/>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;“key” : “부여받은 API KEY”,</span><br/>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;"email” : “abc@mail.hongik.ac.kr”,</span><br/>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;“univName” : “홍익대학교”,</span><br/>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;“code” : 3816</span><br/>
+                  <span>&emsp;&emsp;“key” : “부여받은 API KEY”,</span><br/>
+                  <span>&emsp;&emsp;"email” : “abc@mail.hongik.ac.kr”,</span><br/>
+                  <span>&emsp;&emsp;“univName” : “홍익대학교”,</span><br/>
+                  <span>&emsp;&emsp;“code” : 3816</span><br/>
                   <span>&#125; </span>
                 </code>
               </div>
@@ -84,7 +84,6 @@ const Info1 = () => {
               <ContactUsButton/>
           </div>
         </div>
-
       </div>
     </div>
   );

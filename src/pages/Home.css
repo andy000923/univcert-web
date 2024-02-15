@@ -58,6 +58,7 @@
   font-weight: 600;
 }
 .titletext{
+  margin-left: -3px;
   font-size: 1.6rem;
   font-family: 'IBMPlexSansKR-Regular';
 }
@@ -447,6 +448,7 @@ code, kbd, pre, samp {
   justify-content: space-between;
   min-height: 100px;
   margin: 5px 0px;
+  animation: slide-up 1.3s ease;
 }
 
 .icontext{

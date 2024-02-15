@@ -50,7 +50,7 @@ a {
     color: #ffffff;
     border-bottom: 4px solid #9bc0ec;
   }
-  @media (max-width: 1600px) {
+  @media (max-width: 1500px) {
     .MainLeftBar {
       display: none;
     }
