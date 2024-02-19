@@ -73,6 +73,7 @@
   background-color: #ffffff;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 30px;
+  z-index: 10;
 }
 .api-container:hover .dropdown-content {
   display: block;

@@ -54,11 +54,9 @@
 }
 
 .email-validation-and {
-  margin-left: 5px;
   font-weight: 600;
 }
 .titletext{
-  margin-left: -3px;
   font-size: 1.6rem;
   font-family: 'IBMPlexSansKR-Regular';
 }
@@ -68,7 +66,6 @@
 .improve-your-deliver {
   margin-top: 0px;
   margin-bottom: 35px;
-  margin-left: 5px;
   font-size: 1rem;
   line-height: 26px;
 }

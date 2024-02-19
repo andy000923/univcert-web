@@ -21,6 +21,9 @@ const DropBar = (props) => {
   const goTo7 = () => {
     navigate("/instruction5");
   }
+  const goTo8 = () => {
+    navigate("/instruction8");
+  }
 
   // 스타일 변경 함수를 React 스타일로 수정
   const changeColor = (element) => {
@@ -40,9 +43,7 @@ const DropBar = (props) => {
       <p className="lists" onClick={goTo4} onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>인증된 이메일인지 확인</p>
       <p className="lists" onClick={goTo5} onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>인증된 유저리스트 출력</p>
       <p className="lists" onClick={goTo7} onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>대학명 체크</p>
-      <a href="https://incredible-raincoat-c52.notion.site/cdb55dd7ea5b475eaaf94ce76fa9eba4">
-        <p className="lists" onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>인증가능 대학 명단</p>
-      </a>
+      <p className="lists" onClick={goTo8} onMouseOver={e => changeColor(e.target)} onMouseOut={e => restoreColor(e.target)}>인증 가능 대학 명단</p>
     </div>
   );
 };

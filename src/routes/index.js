@@ -9,6 +9,7 @@ import Info5 from "../pages/information/Info5.jsx";
 import Info7 from "../pages/information/Info7.jsx";
 import Info8 from "../pages/information/Info8.jsx";
 import Info9 from "../pages/information/Info9.jsx";
+import Info10 from "../pages/information/Info10.jsx";
 const RootRoute = () => {
 
     return (
@@ -24,6 +25,7 @@ const RootRoute = () => {
                 <Route path='/instruction5' element={<Info7/>} />
                 <Route path='/instruction6' element={<Info8/>} />
                 <Route path='/instruction7' element={<Info9/>} />
+                <Route path='/instruction8' element={<Info10/>} />
             </Routes>
         </BrowserRouter>
     )

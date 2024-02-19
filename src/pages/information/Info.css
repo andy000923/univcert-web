@@ -89,7 +89,6 @@
     font-size: 1rem;
     line-height: 1rem;
     font-family: 'GmarketSansMedium';
-
     animation: slide-up 1s ease;
 }
 .red-box {
@@ -125,6 +124,46 @@
     font-size: 13pt;
     font-weight: 600;
 }
+.univ-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 15px 0px;
+}
+.search-input {
+    width: 350px;
+    margin-left: 500px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+}
+  
+.univ-box {
+    background-color: #BBD8FC;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-family: 'GmarketSansMedium';
+    animation: slide-up 1s ease;
+}
+  
+
+
 .hljs-pink{
     color: #D56545;
     font-weight: bold;

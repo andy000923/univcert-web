@@ -19,7 +19,8 @@ const InfoSideBar = () => {
             "/instruction4": 4,
             "/instruction5": 5,
             "/instruction6": 6,
-            "/instruction7": 7
+            "/instruction7": 7,
+            "/instruction8": 8
         };
 
         const index = paths[location.pathname];
@@ -79,9 +80,11 @@ const InfoSideBar = () => {
                             인증된 특정 유저 초기화
                         </ul>
                     </Link>
-                    <a href="https://incredible-raincoat-c52.notion.site/cdb55dd7ea5b475eaaf94ce76fa9eba4">
-                        <ul className="div3">인증 가능 대학 명단</ul>
-                    </a>
+                    <Link to='/instruction8'>
+                        <ul className={`div3 ${activeItem === 8 && 'clicked3'}`} onClick={() => setActiveItemHandler(8)}>
+                            인증 가능 대학 명단
+                        </ul>
+                    </Link>
                 </ul>
             </div>
         </div>
