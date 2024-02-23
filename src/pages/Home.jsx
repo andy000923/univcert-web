@@ -14,6 +14,7 @@ import icon5 from "../assets/FooterIcon5.png"
 import icon6 from "../assets/FooterIcon6.png"
 import icon7 from "../assets/FooterIcon7.png"
 import icon8 from "../assets/FooterIcon8.png"
+import slideicon from "../assets/logoimg.svg"
 import footertext from "../assets/FooterText.png"
 const Home = () => {
   const baseUrl = 'https://univcert.com/api';
@@ -207,6 +208,20 @@ const Home = () => {
               </div>
             </div>        
           </div>
+        </div>
+      </div>
+      <div class="slide-banner">
+        <div class="slide-content1">
+          <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
+          <img className="slideicon" alt="icon" src={slideicon}/>
+          <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
+          <img className="slideicon" alt="icon" src={slideicon}/>
+        </div>
+        <div class="slide-content2">
+          <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
+          <img className="slideicon" alt="icon" src={slideicon}/>
+          <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
+          <img className="slideicon" alt="icon" src={slideicon}/>
         </div>
       </div>
       <div className="width-holder1">

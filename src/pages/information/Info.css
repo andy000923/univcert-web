@@ -127,8 +127,8 @@
 .univ-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 30px;
+    grid-row-gap: 15px;
     margin: 15px 0px;
 }
 .search-input {
@@ -161,7 +161,7 @@
     font-family: 'GmarketSansMedium';
     animation: slide-up 1s ease;
 }
-  
+
 
 
 .hljs-pink{
