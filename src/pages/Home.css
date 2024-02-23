@@ -456,6 +456,7 @@ code, kbd, pre, samp {
   font-family: 'GmarketSansMedium';
   font-weight: 1000;
   letter-spacing: 2px;
+  min-width: 1000px;
 }
 
 .slide-content1 {
