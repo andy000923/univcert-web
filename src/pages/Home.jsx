@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {useEffect} from 'react';
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import "./Home.css";
 import checkbox from "../assets/checkbox.svg";
@@ -15,6 +16,7 @@ import icon6 from "../assets/FooterIcon6.png"
 import icon7 from "../assets/FooterIcon7.png"
 import icon8 from "../assets/FooterIcon8.png"
 import slideicon from "../assets/logoimg.svg"
+import baro from "../assets/baro.png"
 import footertext from "../assets/FooterText.png"
 const Home = () => {
   const baseUrl = 'https://univcert.com/api';
@@ -212,16 +214,28 @@ const Home = () => {
       </div>
       <div class="slide-banner">
         <div class="slide-content1">
-          <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
           <img className="slideicon" alt="icon" src={slideicon}/>
-          <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
+          <div className="slide-phrase">
+            <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
+            <Link to='/instruction8'><img className="baro" alt="icon" src={baro}/></Link>
+          </div>
           <img className="slideicon" alt="icon" src={slideicon}/>
+          <div className="slide-phrase">
+            <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
+            <Link to='/instruction8'><img className="baro" alt="icon" src={baro}/></Link>
+          </div>
         </div>
         <div class="slide-content2">
-          <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
+          <div className="slide-phrase">
           <img className="slideicon" alt="icon" src={slideicon}/>
-          <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
+            <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
+            <Link to='/instruction8'><img className="baro" alt="icon" src={baro}/></Link>
+          </div>    
           <img className="slideicon" alt="icon" src={slideicon}/>
+          <div className="slide-phrase">
+            <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
+            <Link to='/instruction8'><img className="baro" alt="icon" src={baro}/></Link>
+          </div> 
         </div>
       </div>
       <div className="width-holder1">

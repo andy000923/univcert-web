@@ -481,6 +481,18 @@ code, kbd, pre, samp {
   width: 30px;
   opacity: 0.8;
 }
+.slide-phrase{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+.baro{
+  width: 80px;
+  margin-left: 20px;
+  margin-top: 8px;
+}
 @keyframes slideRight {
   0% {
     left: 0; /* 시작 위치 */
