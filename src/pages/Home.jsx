@@ -212,32 +212,34 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Link to='/instruction8'>
       <div class="slide-banner">
         <div class="slide-content1">
           <img className="slideicon" alt="icon" src={slideicon}/>
           <div className="slide-phrase">
             <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
-            <Link to='/instruction8'><img className="baro" alt="icon" src={baro}/></Link>
+            <img className="baro" alt="icon" src={baro}/>
           </div>
           <img className="slideicon" alt="icon" src={slideicon}/>
           <div className="slide-phrase">
             <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
-            <Link to='/instruction8'><img className="baro" alt="icon" src={baro}/></Link>
+            <img className="baro" alt="icon" src={baro}/>
           </div>
         </div>
         <div class="slide-content2">
           <div className="slide-phrase">
           <img className="slideicon" alt="icon" src={slideicon}/>
             <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
-            <Link to='/instruction8'><img className="baro" alt="icon" src={baro}/></Link>
+            <img className="baro" alt="icon" src={baro}/>
           </div>    
           <img className="slideicon" alt="icon" src={slideicon}/>
           <div className="slide-phrase">
             <p>24.02 전국 400개 대학교 업데이트 완료 !</p>
-            <Link to='/instruction8'><img className="baro" alt="icon" src={baro}/></Link>
+            <img className="baro" alt="icon" src={baro}/>
           </div> 
         </div>
       </div>
+      </Link>
       <div className="width-holder1">
         <div className="flex-container-2">
           <div className='flex-container-3'>

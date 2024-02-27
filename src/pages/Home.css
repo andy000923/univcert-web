@@ -491,7 +491,6 @@ code, kbd, pre, samp {
 .baro{
   width: 80px;
   margin-left: 20px;
-  margin-top: 8px;
 }
 @keyframes slideRight {
   0% {

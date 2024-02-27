@@ -19,13 +19,13 @@ const Header = () => {
         <img className="univcertlogo" src={univcertlogo} alt="mainlogo" onClick={goToHome}/>
         <div className="letter-frame">
           <div className="api-container">
-            <span className="ap-is"><Link to="/instruction" style={{ textDecoration: "none" , color:"black"}}>APIs</Link></span>
+          <Link to="/instruction" style={{ textDecoration: "none" , color:"black"}}><span className="ap-is">APIs</span></Link>
             <img type="button" className="api-button" alt="apis" src={expandMore1} onClick={goTo1}/>
             <ul class="dropdown-content">
               <DropBar/>
             </ul>
           </div>
-          <button className="frame-31"><Link to="/login" style={{ textDecoration: "none", color:"white"}}>API 키 발급</Link></button>
+          <Link to="/login" style={{ textDecoration: "none", color:"white"}}><button className="frame-31">API 키 발급</button></Link>
         </div>
       </div>
     </div>
