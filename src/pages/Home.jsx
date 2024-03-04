@@ -19,7 +19,7 @@ import slideicon from "../assets/logoimg.svg"
 import baro from "../assets/baro.png"
 import footertext from "../assets/FooterText.png"
 const Home = () => {
-  const baseUrl = 'https://univcert.com/api';
+  const baseUrl = 'https://univcert.com:8080/api';
     const [color, setcolor] = useState(false);
     const [univcheck, setunivcheck] = useState(false);
     const [email, setemail] = useState();
