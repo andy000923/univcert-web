@@ -93,7 +93,7 @@ const Home = () => {
           }
         )
         .then(response=>{
-          console.log(response);   
+          //console.log(response);   
           setstatus(response.data.status); 
           setdomain(response.data.domain);
           setemail1(email);

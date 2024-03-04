@@ -37,32 +37,40 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         axios.defaults.withCredentials = true;
-        await axios
-            .post(baseUrl + "/login", {
-                email:email,
-                team_name:team_name,
-            },
-            {
-                withCredentials: true // 쿠키 cors 통신 설정
-              })
-            .then(response=>{
-                console.log(response);
-                console.log(email, team_name);
-                if (response.status === 200) {
-                    alert("로그인 성공!");
-                    setemailmax(response.data.data.queryCount);
-                    setapikey(response.data.data.key);
-                    setmypage(true);
-                } else if (response.status === 400) {
-                    alert("로그인 실패, API 키 발급을 위해 먼저 회원가입을 진행해 주세요.");
-                }
-            },
-            (error)=>{
-                console.log(error);              
-                if (error.code!=null) {
-                    alert("Server error. 잠시후에 다시 시도해주세요.");
-                }  
-            });
+        if(team_name==null) {
+            alert("소속명을 입력해주세요.");
+        }
+        else if(email==null){
+            alert("이메일을 입력해주세요.");
+        }
+        else{
+            await axios
+                .post(baseUrl + "/login", {
+                    email:email,
+                    team_name:team_name,
+                },
+                {
+                    withCredentials: true // 쿠키 cors 통신 설정
+                })
+                .then(response=>{
+                    //console.log(response);
+                    //console.log(email, team_name);
+                    if (response.status === 200) {
+                        alert("로그인 성공!");
+                        setemailmax(response.data.data.queryCount);
+                        setapikey(response.data.data.key);
+                        setmypage(true);
+                    } else if (response.status === 400) {
+                        alert("로그인 실패, API 키 발급을 위해 먼저 회원가입을 진행해 주세요.");
+                    }
+                },
+                (error)=>{
+                    console.log(error);             
+                    if (error.code!=null) {
+                        alert("등록되지 않은 이메일이거나 소속명이 일치하지 않습니다.");
+                    }  
+                });
+            }
         }
 
         
