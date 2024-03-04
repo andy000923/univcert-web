@@ -58,10 +58,10 @@ const Home = () => {
           univName:univName,
         },
         {
-            withCredentials: true // 쿠키 cors 통신 설정
-          })
+          withCredentials: true // 쿠키 cors 통신 설정
+        })
         .then(response=>{
-          console.log(response);
+          //console.log(response);
           if (response.data.code == null) {          
             alert("테스트가 가능한 학교명입니다!"); 
             setunivcheck(true);   
