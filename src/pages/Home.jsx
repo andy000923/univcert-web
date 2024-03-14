@@ -50,6 +50,7 @@ const Home = () => {
       setunivName(e.target.value);
       setunivcheck(false);
     }
+    
     const handleCheckUniv = async (e) => {
       e.preventDefault();
       axios.defaults.withCredentials = true;
