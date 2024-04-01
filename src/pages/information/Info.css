@@ -52,7 +52,8 @@
 }
 .gradle-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 16px;
     margin: 10px 0;
     background: #EBEFF4;
@@ -71,6 +72,11 @@
     line-height: 1.2rem;
     margin-left: 10px;
     font-family: 'GmarketSansMedium';
+}
+.lang-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .blue-container {
     display: flex;

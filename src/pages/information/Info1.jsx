@@ -2,6 +2,8 @@ import "./Info.css"
 import Header from "../../components/Header";
 import ContactUsButton from '../../components/ContactUsButton';
 import InfoSideBar from "../../components/InfoSideBar";
+import Java from "../../assets/java_logo.png"
+import Kotlin from "../../assets/kotlin_logo.png"
 const Info1 = () => {
   return (
     <div className="slide">
@@ -26,9 +28,25 @@ const Info1 = () => {
                     <span>dependencies&#123;</span><br/>
                     <span>&emsp;&emsp;&emsp;...</span><br/>
                     <span>&emsp;&emsp;&emsp;implementation <span class="hljs-red">'com.github.in-seo:univcert:master-SNAPSHOT'</span></span><br/>
-                    <span>&emsp;&emsp;&emsp;...</span><br/>
                     <span>&#125; </span>
                 </code>
+                <div className="lang-logo"><img src={Java} alt="java" width="50px" height="50px"/></div>
+              </div>
+              <h3>🧑‍💻 코틀린 사용자 간편 라이브러리 등록</h3>
+              <div className="gradle-container">
+                <code className="code-container1">
+                    <span>repositories&#123;</span><br/>
+                    <span>&emsp;&emsp;&emsp;...</span><br/>
+                    <span>&emsp;&emsp;&emsp;maven&#123; url = uri("https://jitpack.io") &#125;</span><br/>
+                    <span>&#125;</span><br/><br/>
+                    <span>dependencies&#123;</span><br/>
+                    <span>&emsp;&emsp;&emsp;...</span><br/>
+                    <span>&emsp;&emsp;&emsp;implementation (<span class="hljs-red">"com.github.in-seo:univcert:master-SNAPSHOT"</span>) &#123;</span><br/>
+                    <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;exclude(group = "org.hamcrest", module = "hamcrest-core")</span><br/>
+                    <span>&emsp;&emsp;&emsp;&#125;</span><br/>
+                    <span>&#125;</span>
+                </code>
+                <div className="lang-logo"><img src={Kotlin} alt="kotlin" width="50px" height="50px"/></div>
               </div>
               <div className="blue-container">
                 <div className="blue-box">
