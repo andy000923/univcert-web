@@ -1,7 +1,6 @@
 .flex-container-5 {
   position: relative;
   z-index: 999;
-  margin-top: 10px;
   flex-direction: row;
   flex-basis: 4%;
   justify-content: right;
@@ -11,12 +10,31 @@
   bottom: 30px;
   right: 30px;
 }
-.image9{
-  width: 25px;
-  height: 25px;
+.github{
   margin-right: 10px;
-  margin-top: 6px;
+  margin-top: 0px;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
-.Button9{
-  height: 40px;
+.github:hover{
+  background-color: #cfcfe8;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.contact-button {
+  font-family: 'NanumSquare';
+  padding: 10px;
+  border: none;
+  border-radius: 18px;
+  background-color: #2e5689;
+  color: #f9fcff;
+  font-weight: 600;
+  font-size: 9pt;
+  cursor: pointer;
+  float: right;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.contact-button:hover {
+  background-color: #a7a7d8;
+  color: #f9fcff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
